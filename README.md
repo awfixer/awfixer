@@ -1,14 +1,26 @@
-## Hey There, thanks for looking at my README
+# 👋 Hi there! I'm AWFixer. 
 
-Personally I have made a choice and I do not host any repos on my profiles anymore, they are all in either my personal organization, or they are hosted in one of the Axyl Projects Organizations. If you want to learn more about me, I appreciate that, there are some links below that you can use to learn more about me, and do not be afraid to reach out, I will do my best to help. I have taken a pretty major step towards personal improvement recently, and I am happy for everyone who is, has, and will be on this journey with me.
+### 🌟 I'm the founder and owner of [Axyl Projects](https://axylprojects.dev), where we strive to create innovative solutions that empower the community. 
+![Axyl Logo](https://github.com/axyl-os.png)
 
- * Websites:
-     - [My Main Website](https://awfixer.me)
-     - [My Project Website](https://awfixer.dev)
- * [Discord](https://discord.gg/JRS5kcGwhk)
+- Some of the Projects that we are working on over at Axyl Projects
+ - [AxylOS](https://axyl.org) - A minimal, Arch Based Distrobution, shipping with a Nice, Smexy, DE Resemblent Hyprland Config Out of the Box, and with support from the Community
+ - [AxylBot](https://axylbot.com) - Axyl Bot is the Bot of the Future, a bot Designed to grow with your community, and keep pace with your interests.
+     - A whitelist-only bot, join the [Discord Server](https://discord.gg/axylprojects) to learn more
+ - [Zenith-Mod](https://zenith.axylprojects.dev) - This is a Fork of Pyoncord && Vencord that we maintain, as well as use internally for some of our projects
+   - Read more about how we use it internally in our [Discord Server](https://discord.gg/axylprojects)
+- [Axyl Bot Service](https://abs.axylprojects.dev) - A service for providing, hosting, and manager FOSS bots that you can use to help run your Discord Community
+- [Axyl O.S. Templates](templates.axyl.org) - A Service for making custom versions of Different Linux Distrobutions
 
-## As of Recently I have been revealing a lot of "trade secrets" that I personally have used, in hopes that they benifit the FOSS Community as a whole, if you want to know more then join the [Discord](https://discord.gg/JRS5kcGwhk) and Look into them, the logs of what I am doing are located [here](https://discord.com/channels/901712639099543552/1271673023971197022) Hope it helps.
+### 🌟 I am also the founder and owner of [rootCORP](https://rootcorp.dev) and [rootLIVE](https://rootlive.org) Which you can learn more about on their respective Websites!
 
-## Also Let it be known that I am now enforcing the FOSS CoC written my Derek Taylor, in all of my work, from Github, to Axyl Projects, and beyond, the only exception to that is [The Autism Community](https://theautismcommunity.net)
+💻 As a passionate FOSS (Free and Open Source Software) enthusiast, I believe in the power of collaboration and transparency in technology. I actively contribute to projects that embody these values and inspire others to do the same. 
 
-## Finally, I am officially supporting Autism, which can be taken however you want, I have Autism, and I want to make sure that everyone on the Spectrum gets a fair chance at life, you can support us through [GoFundMe](https://gofund.me/340dbad9)
+💡 A leader at heart, I love guiding teams and supporting fellow developers in their journeys. Together, we can push the boundaries of what's possible in the open-source world. 
+
+### 📬 Ways to Contact me:
+- [Discord](https://discord.gg/axylprojects)
+- [My Website](https://awfixer.me)
+- [Email](mailto:inquiries@awfixer.me)
+
+# Let's [connect](https://contact.awfixer.me) and create something amazing!
