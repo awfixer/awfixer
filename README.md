@@ -9,7 +9,7 @@
      - A whitelist-only bot, join the [Discord Server](https://discord.gg/axylprojects) to learn more
  - [Zenith-Mod](https://zenith.axylprojects.dev) - This is a Fork of Pyoncord && Vencord that we maintain, as well as use internally for some of our projects
    - Read more about how we use it internally in our [Discord Server](https://discord.gg/axylprojects)
-- [Axyl Bot Service](https://abs.axylprojects.dev) - A service for providing, hosting, and manager FOSS bots that you can use to help run your Discord Community
+- [Axyl Bot Service](https://abs.axylprojects.dev) - A service for providing, hosting, and managing FOSS bots that you can use to help run your Discord Community
 - [Axyl O.S. Templates](templates.axyl.org) - A Service for making custom versions of Different Linux Distrobutions
 
 ### 🌟 I am also the founder and owner of [rootCORP](https://rootcorp.dev) and [rootLIVE](https://rootlive.org) Which you can learn more about on their respective Websites!
