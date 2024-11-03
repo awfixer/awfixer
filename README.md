@@ -11,7 +11,10 @@ I have been working on Axyl Projects and AWFixer & Friends as a hobby for a few 
 *   🚀  I'm currently working on [Rustfox, AxylOS, Helctic, and Axyl Social](http://axyl.wtf)
 *   🧠  I'm learning how to manage large scale distributed infra, written in elixir
 *   🤝  I'm open to collaborating on Any of my, or my companies projects
-*   ⚡  People say "Your not human" and I always reply, "your absolutely write, I used to be called the Winter Soldier, now they just call me Austin.<a href="https://www.x.com/awfixer" target="_blank" rel="noreferrer"><img
+*   ⚡  People say "Your not human" and I always reply, "your absolutely write, I used to be called the Winter Soldier, now they just call me Austin.
+*
+*
+*   <a href="https://www.x.com/awfixer" target="_blank" rel="noreferrer"><img
                   src="https://img.shields.io/twitter/follow/awfixer?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1e3a8a"
                 /></a><a href="https://www.twitch.tv/dieyoung733" target="_blank" rel="noreferrer"><img
                   src="https://img.shields.io/twitch/status/dieyoung733?logo=twitchsx&style=for-the-badge&color=0891b2&labelColor=1e3a8a&label=TWITCH+STATUS" /></a>### Skills 
