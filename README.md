@@ -1,7 +1,7 @@
 Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Austin "AWFixer" Ware
 =============================================================================================================================================
 
-Founder and Owner of \[Axyl Projects\](https://axylprojects.dev), \[rootCORP Games\](https://rootcorp.dev), and \[AWFixer & Friends\](https://friends.awfixer.me)
+Founder and Owner of \[Axyl Projects](https://axylprojects.dev)\, \[rootCORP Games](https://rootcorp.dev)\, and \[AWFixer & Friends](https://friends.awfixer.me)\
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 I have been working on Axyl Projects and AWFixer & Friends as a hobby for a few years now, but recently we have decided to go to scale. You can read more on their Websites
