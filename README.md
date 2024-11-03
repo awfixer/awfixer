@@ -78,7 +78,4 @@ I have been working on Axyl Projects and AWFixer & Friends as a hobby for a few 
                     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitch.svg" />
                     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitch.svg" width="32" height="32" />
                     </picture>
-                    </a></p>### Badges<b>My GitHub Stats</b><a
-                      href="http://www.github.com/awfixer"><img src="https://github-readme-stats.vercel.app/api?username=awfixer&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1e3a8a&hide_border=true&show_icons=true" alt="awfixer's GitHub stats" /></a><a
-                      href="http://www.github.com/awfixer"><img
-                  src="https://github-readme-streak-stats.herokuapp.com/?user=awfixer&stroke=ffffff&background=1e3a8a&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>### Support Me<ul style="list-style-type: none; margin: 0;"><li style="display: inline-block; margin-right: 0.25rem;"><a href="https://www.buymeacoffee.com/awfixer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="150"/></a></li><li style="display: inline-block; margin-right: 0.25rem;"><a href="https://www.ko-fi.com/awfixer"><img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" width="150"/></a></li></ul>
+                    </a></p>### Badges
