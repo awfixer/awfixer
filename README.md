@@ -13,7 +13,7 @@
 </div>
 
 **<h3 align="left">Connect with me:</h3>** 
-<p align="left"><a href="https://github.com/the-autists" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" height="28" style="margin-right: 4px"></a> <a href="https://twitter.com/awfixer" target="_blank"><img src="https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=X&logoColor=white" height="28" style="margin-right: 4px"></a> <a href="https://www.youtube.com/@awfixer" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" height="28" style="margin-right: 4px"></a></p>
+<p align="left"><a href="https://github.com/awfixer" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" height="28" style="margin-right: 4px"></a> <a href="https://twitter.com/awfixer" target="_blank"><img src="https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=X&logoColor=white" height="28" style="margin-right: 4px"></a> <a href="https://www.youtube.com/@awfixer" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" height="28" style="margin-right: 4px"></a></p>
 
  **<h3 align="left">hello, I am a passtionate developer, and I work on bringing that to other people, you can join my [discord](https://discord.gg/awfixer)</h3>**
 
