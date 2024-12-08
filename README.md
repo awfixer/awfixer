@@ -1,4 +1,4 @@
-![Hi, I am austin, I go by AWFixer, and I am a passionate Technologist, business owner, and community leader. you can find me on my [discord](https://discord.gg/awfixer)](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/79731568097599.5b50bca477735.jpg)
+![Hi, I am austin, I go by AWFixer, and I am a passionate Technologist, business owner, and community leader. you can find me on my discord @ https://discord.gg/awfixer](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/79731568097599.5b50bca477735.jpg)
 
 ![Profile views](https://komarev.com/ghpvc/?username=the-autists&label=Profile%20views&color=0e75b6&style=flat)
 
@@ -6,7 +6,7 @@
   <ul align="center" style="list-style: none">
     <summary>
       <h1>
-        Hi, I am austin, I go by AWFixer, and I am a passionate Technologist, business owner, and community leader. you can find me on my [discord](https://discord.gg/awfixer)
+        Hi, I am austin, I go by AWFixer, and I am a passionate Technologist, business owner, and community leader. you can find me on my discord @ https://discord.gg/awfixer
       </h1>
     </summary>
   </ul>
