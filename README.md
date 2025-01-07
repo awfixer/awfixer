@@ -2,46 +2,35 @@
 
 ![Profile views](https://komarev.com/ghpvc/?username=the-autists&label=Profile%20views&color=0e75b6&style=flat)
 
-<div id="toc">
-  <ul align="center" style="list-style: none">
-    <summary>
-      <h1>
-        Hi, I am austin, I go by AWFixer, and I am a passionate Technologist, business owner, and community leader. you can find me on my discord @ https://discord.gg/awfixer
-      </h1>
-    </summary>
-  </ul>
-</div>
+> [!WARNING]
+**I am very busy, and very easily distracted. I love people, but if I seem like I am not paying attention, I apologize, I am likely working on something. Naturally nocturnal, I can chat the most between 6am-9am PST, between work and bed**
 
-**<h3 align="left">Connect with me:</h3>** 
-<p align="left"><a href="https://github.com/awfixer" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" height="28" style="margin-right: 4px"></a> <a href="https://twitter.com/awfixer" target="_blank"><img src="https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=X&logoColor=white" height="28" style="margin-right: 4px"></a> <a href="https://www.youtube.com/@awfixer" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" height="28" style="margin-right: 4px"></a></p>
+<a href="#">
+  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=awfixer&theme=tokyonight&show_icons=true&show=reviews,prs_merged,prs_merged_percentage" />
+</a>
+<a href="#">
+  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=awfixer&layout=compact&langs_count=8&card_width=320&theme=tokyonight" />
+</a>
 
- **<h3 align="left">hello, I am a passtionate developer, and I work on bringing that to other people, you can join my [discord](https://discord.gg/awfixer)</h3>**
+# Hello World 👋
 
-**<h3 align="left">Rapid Fire</h3>**
+## About Me
+- Currently building AWFixer-OS(no info yes :() and https://discord.gg/awfixer
+- Hacker at heart - If I don't, who will?
+- Lover of open source - I use Arch btw, check out my [dotfiles](https://github.com/awfixer-dots)! 
 
-- 💼 I'm currently working on: **💻 Developing a community on discord**
-- 🌱 I'm currently learning: **📚 Acceptance of generalizations**
-- 💬 Ask me about: **What it is like to be Autistic**
-- ⚡ Fun fact: **I once debugged a issue while on a roller coaster!**
-- 📂 Portfolio: **<a href="theautismcommunity.net/projects" target="_blank">theautismcommunity.net/projects</a>**
-- 📝 Blog: **<a href="blog.awfixer.dev" target="_blank">blog.awfixer.dev</a>**
+## Tech Stack
+### Frameworks
+<img src="https://img.shields.io/badge/Next%20JS-000000?style=for-the-badge&logo=next.js&logoColor=white" /> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" /> <img src="https://img.shields.io/badge/React%20Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" /> <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" />
 
+### UI/UX
+<img src="https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" /> <img src="https://img.shields.io/badge/Ant%20Design-0170FE?style=for-the-badge&logo=ant-design&logoColor=white" /> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" /> <img src="https://img.shields.io/badge/Chakra%20UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white" /> <img src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white" />
 
- **<h3 align="left">Skills</h3>**
+### Backend
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" /> <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=MariaDB&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=PostgreSQL&logoColor=white" /> <img src="https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=Supabase&logoColor=white" /> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
 
-<table style="width: 100%; border: 0px solid white;"><tr><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/Vim-019733?logo=vim&logoColor=white" height="32" alt="Vim"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white" height="32" alt="Figma"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/Notepad++-90E59A?logo=notepad-plus-plus&logoColor=white" height="32" alt="Notepad++"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/Emacs-7F5AB6?logo=emacs&logoColor=white" height="32" alt="Emacs"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/Visual_Studio_Code-007ACC?logo=visual-studio-code&logoColor=white" height="32" alt="Visual Studio Code"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/Zapier-FA6F00?logo=zapier&logoColor=white" height="32" alt="Zapier"/></td></tr><tr><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white" height="32" alt="GitHub Actions"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/CircleCI-343434?logo=circleci&logoColor=white" height="32" alt="CircleCI"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://skillicons.dev/icons?i=appwrite" height="32" alt="Appwrite"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white" height="32" alt="Supabase"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="32" alt="Python"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" height="32" alt="Lua"/></td></tr><tr><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg" height="32" alt="Elixir"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" height="32" alt="Go"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white" height="32" alt="OpenAI"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white" height="32" alt="PyTorch"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" height="32" alt="PostgreSQL"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original-wordmark.svg" height="32" alt="Redis"/></td></tr><tr><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" height="32" alt="MongoDB"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" height="32" alt="MySQL"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/Puppet-FFAE1A?logo=puppet&logoColor=white" height="32" alt="Puppet"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/Ansible-EE0000?logo=ansible&logoColor=white" height="32" alt="Ansible"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white" height="32" alt="GitHub Actions"/></td><td style="text-align: center; border: 0px; padding: 12px;"><img src="https://img.shields.io/badge/Terraform-623CE4?logo=terraform&logoColor=white" height="32" alt="Terraform"/></td></tr></table>
+### Operating Systems
+<img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" /> <img src="https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white" /> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" /> <img src="https://img.shields.io/badge/NixOS-41439B?style=for-the-badge&logo=NixOS&logoColor=white" />
 
- **<h3 align="left">GitHub Stats</h3>**
-
-<p align="left">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=awfixer&theme=react&hide_title=false&hide_rank=false&show_icons=false&include_all_commits=false&count_private=true&line_height=23" alt="GitHub stats Card" />
-  <img width="48%" src="https://streak-stats.demolab.com/?user=awfixer" alt="GitHub streak Card" />
-</p>
-
-<p align="left">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs?username=awfixer&theme=react&hide_title=false&layout=compact&langs_count=6&hide_progress=false&card_width=400" alt="GitHub top-langs Card" />
-</p>
-
- **<h3 align="left">Support Me</h3>**
-
-<p align="left"><a href="https://www.patreon.com/awfixer" target="_blank"><img src="https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white" height="36" style="margin-right: 4px"></a> <a href="https://ko-fi.com/awfixer" target="_blank"><img src="https://img.shields.io/badge/Ko--fi-343B45?style=for-the-badge&logo=kofi&logoColor=Black" height="36" style="margin-right: 4px"></a> <a href="https://buymeacoffee.com/awfixer" target="_blank"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-fde047?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white" height="36" style="margin-right: 4px"></a></p>
+### Tools
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" /> <img src="https://img.shields.io/badge/DigitalOcean-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white" /> <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" /> <img src="https://img.shields.io/badge/Twilio-FF6F00?style=for-the-badge&logo=twilio&logoColor=white" /> <img src="https://img.shields.io/badge/Adobe-ff0000?style=for-the-badge&logo=adobe&logoColor=white" /> <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" /> <img src="https://img.shields.io/badge/stripe-626CD9?style=for-the-badge&logo=stripe&logoColor=white" />
