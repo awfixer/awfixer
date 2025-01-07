@@ -15,7 +15,7 @@
 # Hello World 👋
 
 ## About Me
-- Currently building AWFixer-OS(no info yes :() and https://discord.gg/awfixer
+- Currently building AWFixer-OS (no info yet :( ) and https://discord.gg/awfixer
 - Hacker at heart - If I don't, who will?
 - Lover of open source - I use Arch btw, check out my [dotfiles](https://github.com/awfixer-dots)! 
 
