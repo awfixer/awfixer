@@ -12,43 +12,16 @@
 
 ### 👷 Check out what I'm currently working on
 
-- [ChrisTitusTech/website](https://github.com/ChrisTitusTech/website) - My HUGO Website that I use for Videos, Blogs, and Redirects
-- [ChrisTitusTech/winutil](https://github.com/ChrisTitusTech/winutil) - Chris Titus Tech&#39;s Windows Utility - Install Programs, Tweaks, Fixes, and Updates
-- [ChrisTitusTech/linutil](https://github.com/ChrisTitusTech/linutil) - Chris Titus Tech&#39;s Linux Toolbox - Linutil is a distro-agnostic toolbox designed to simplify everyday Linux tasks.
-- [ChrisTitusTech/ageoftitus](https://github.com/ChrisTitusTech/ageoftitus) - Age of Titus Gaming Channel
-- [ChrisTitusTech/dwm-titus](https://github.com/ChrisTitusTech/dwm-titus) - My DWM configuration with everything pre-patched
+- [V for Vendetta](https://discord.gg/awfixer) - the Current name for my Community, which changes to reflect my mood.
+- [AWFixer-Org/Dotfiles](https://github.com/awfixer-org/dotfiles) - My personal dotfiles for Arch Linux
 
 ### 🌱 My latest projects
 
-- [ChrisTitusTech/apm](https://github.com/ChrisTitusTech/apm) - This is a basic Actions Per Minute Overlay for tracking in Windows and Linux
-- [ChrisTitusTech/ageoftitus](https://github.com/ChrisTitusTech/ageoftitus) - Age of Titus Gaming Channel
-- [ChrisTitusTech/d2r-loot-filter](https://github.com/ChrisTitusTech/d2r-loot-filter) - Chris Titus Tech&#39;s Loot Filter for Diablo II Resurrected.
-- [ChrisTitusTech/ffxi-windower](https://github.com/ChrisTitusTech/ffxi-windower) -
-- [ChrisTitusTech/acpilight](https://github.com/ChrisTitusTech/acpilight) - fixes broken xbacklight on new intels that uninstall xorg-server-video-intel packages which cause tearing
-
-### 🔨 My recent Pull Requests
-
-- [Update linutil.yml release workflow](https://github.com/ChrisTitusTech/linutil/pull/993) on [ChrisTitusTech/linutil](https://github.com/ChrisTitusTech/linutil)
-- [fix winget for good](https://github.com/ChrisTitusTech/winutil/pull/3096) on [ChrisTitusTech/winutil](https://github.com/ChrisTitusTech/winutil)
-- [Change install to winget, nuget, msstore](https://github.com/ChrisTitusTech/winutil/pull/3088) on [ChrisTitusTech/winutil](https://github.com/ChrisTitusTech/winutil)
-- [Fix language and Logic to Updates](https://github.com/ChrisTitusTech/winutil/pull/3087) on [ChrisTitusTech/winutil](https://github.com/ChrisTitusTech/winutil)
-- [Update preview for latest](https://github.com/ChrisTitusTech/linutil/pull/904) on [ChrisTitusTech/linutil](https://github.com/ChrisTitusTech/linutil)
-
-### ⭐ Recent Stars
-
-- [tpill90/battlenet-lancache-prefill](https://github.com/tpill90/battlenet-lancache-prefill) - CLI tool to automatically prefill a Lancache with Battle.Net games
-- [moraroy/NonSteamLaunchers-On-Steam-Deck](https://github.com/moraroy/NonSteamLaunchers-On-Steam-Deck) - Installs the latest UMU/GE-Proton and Non Steam Launchers under 1 Proton prefix folder and adds them to your steam library. Installs... Battle.net, Epic Games, Ubisoft, GOG, EA App, Amazon Games, itch.io , Legacy Games, The Humble Games Collection, IndieGala, Rockstar Games Launcher,PS Plus, Glyph, VKPlay &amp; HoYoPlay. SD Card Support and Games.
-- [CodingWonders/updgui](https://github.com/CodingWonders/updgui) - UpdGUI - A simple PowerShell front-end for PSWindowsUpdate
-- [Nexus-Mods/NexusMods.App](https://github.com/Nexus-Mods/NexusMods.App) - Home of the development of the Nexus Mods App
-- [derceg/explorerplusplus](https://github.com/derceg/explorerplusplus) - Explorer&#43;&#43; is a lightweight and fast file manager for Windows
+- [AWFixer-Org/AWFixer-PM](https://github.com/awfixer-org/awfixer-pm) - What is your Package Manager Actually doing for you?
+- [AWFixer-Org/ALM](https://github.com/awfixer-org/alm) - Our approach to Language Models is less training is the best training
+- [AWFixer-Org/AWFixer-OS](https://github.com/awfixer-org/awfixer-os) - Free yourself from the bounds of your OS
 
 ### 📰 Recent Blog Posts
-
-- [The State of Linux Gaming](https://christitus.com/the-state-of-linux-gaming/)
-- [Enhanced Linux in Windows](https://christitus.com/enhanced-linux-in-windows/)
-- [Removing SystemD from Linux](https://christitus.com/removing-systemd/)
-- [The Most Popular Windows Utility](https://christitus.com/winutil-install/)
-- [Crowdstrike Alternatives](https://christitus.com/crowdstrike-alternatives/)
 
 ### 📫 How to reach me:
 
