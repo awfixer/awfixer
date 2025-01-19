@@ -8,7 +8,7 @@
 
 ### GitHub Stats
 
-<p align="left"><img src="https://raw.githubusercontent.com/ChrisTitusTech/ChrisTitusTech/main/github-metrics.svg" /></p>
+<p align="left"><img src="https://raw.githubusercontent.com/awfixer/awfixer/main/github-metrics.svg" /></p>
 
 ### 👷 Check out what I'm currently working on
 
