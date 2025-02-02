@@ -28,7 +28,7 @@ jobs:
           base: header, activity, community, repositories, metadata
           base_indepth: yes
           commits_authoring: .user.login.awfixer
-          config_timezone: America/Los_Ang
+          config_timezone: America/Los_Angeles
           plugin_activity: yes
           plugin_activity_days: 14
           plugin_activity_filter: all
