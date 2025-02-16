@@ -12,21 +12,6 @@
 
 ### 👷 Check out what I'm currently working on
 
-- [V for Vendetta](https://discord.gg/awfixer) - the Current name for my Community, which changes to reflect my mood.
-- [AWFixer-Org/Dotfiles](https://github.com/awfixer-org/dotfiles) - My personal dotfiles for Arch Linux
+There would be something here, but I am not talking about it. You can see my blog post [Here](https://awfixer.me/blog/why) for details as to why that is.
 
-### 🌱 My latest projects
-
-- [AWFixer-Org/AWFixer-PM](https://github.com/awfixer-org/awfixer-pm) - What is your Package Manager Actually doing for you?
-- [AWFixer-Org/ALM](https://github.com/awfixer-org/alm) - Our approach to Language Models is less training is the best training
-- [AWFixer-Org/AWFixer-OS](https://github.com/awfixer-org/awfixer-os) - Free yourself from the bounds of your OS
-
-### 📰 Recent Blog Posts
-
-### 📫 How to reach me:
-
-- Youtube : <https://youtube.com/c/AWFixer>
-- Twitter : <https://twitter.com/awfixer>
-- Website : <https://awfixer.me>
-- Web Store : <https://awfixer.shop>
-- Discord : <https://discord.gg/awfixer>
+I am working on a private project at the moment, and you can check that out in my org @awfixer-org
