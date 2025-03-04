@@ -11,7 +11,4 @@
 <p align="left"><img src="https://raw.githubusercontent.com/awfixer/awfixer/main/github-metrics.svg" /></p>
 
 ### 👷 Check out what I'm currently working on
-
-There would be something here, but I am not talking about it. You can see my blog post [Here](https://awfixer.me/blog/why) for details as to why that is.
-
-I am working on a private project at the moment, and you can check that out in my org @awfixer-org
+im working on revengeos.
