@@ -2,8 +2,28 @@
 
 <h1 align="center">Just a Simple Developer</h1>
 
-# I am currently moving all of my stuff off of github, to one of the following locations
+### Hi there 👋
 
-# [austinware's (my) gitea](https://gitea.awfixer.me)
+- 🔭 I’m currently working on
+  * (AWFixer Industries)[https://awfixer.dev)
 
-# [AWFixer Security on Gitlab](https://gitlab.com/awfixer-org)
+- 🌱 I’m currently learning
+  * *crickets chirp* about how to live as a Disabled Autistic Man
+  
+- 📫 How to reach me:
+
+  Email: austin@thedarkweb.store
+  
+  Twitter: [@gaminggeekdev](https://twitter.com/awfixer
+  
+  Discord:
+
+  [![Discord Presence](https://lanyard-profile-readme.vercel.app/api/940285292944961537?hideDiscrim=true)](https://discord.com/users/940285292944961537)
+  
+- Discord Servers:
+  
+  [![widget](https://inv.wtf/widget/fire)](https://inv.wtf/austinscave)
+  
+- GitHub Stats
+
+  ![Github stats](https://github-readme-stats.vercel.app/api?username=awfixer&theme=blueberry&count_private=true&hide_border=true&line_height=25)
