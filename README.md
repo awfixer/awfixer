@@ -22,7 +22,7 @@
   
 - Discord Servers:
   
-  [![widget](https://inv.wtf/widget/fire)](https://inv.wtf/austinscave)
+  [![widget](https://inv.wtf/widget/austinscave)](https://discord.gg/austinscave)
   
 - GitHub Stats
 
