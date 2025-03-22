@@ -14,7 +14,7 @@
 
   Email: austin@thedarkweb.store
   
-  Twitter: [@gaminggeekdev](https://twitter.com/awfixer
+  Twitter: [@awfixer](https://twitter.com/awfixer)
   
   Discord:
 
