@@ -24,8 +24,6 @@
 
   [![austins cave](https://invidget.switchblade.xyz/austinscave)](https://discord.gg/austinscave)
 
-![metrics](https://raw.githubusercontent.com/awfixer/awfixer/refs/heads/main/github-metrics.svg)
-
 <div align="center">
 
 # TOC
@@ -139,3 +137,5 @@ You can support what I do using the following links
 </details>
 
 [(Back to top)](@toc)
+
+![metrics](https://raw.githubusercontent.com/awfixer/awfixer/refs/heads/main/github-metrics.svg)
