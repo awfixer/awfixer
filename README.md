@@ -43,28 +43,20 @@
 
 # Projects
 
-<details>
-
-<summary>Some of the projects that I am working on</summary>
+## Some of the projects that I am working on
 
 These are more of my personal projects, as they solve problems I often have personally, I will list out my various Github Organizations and bigger projects at the bottom of the README
 
-</details>
 
-
-# Webhook Formatter
+## Webhook Formatter
 
 This is one of those things where you dont understand how much you will love it until you use it. I personally have had to struggle with the idea of getting my webhooks to work between different platforms for a while, and it is not nearly as easy as people like to say it is. So I have taken the time to work on a way to do it automatically. Admittedly the version that i use myself is not good at all and needs a lot of work, though i am working on a dashboard that will make it much more intunitive to use and friendly to not so technical people.
 
 read more [Here](readmes/webhookformatter.md)
 
-<details>
-
-<summary>AI Powered Discord Automod Bot</summary>
+## AI Powered Discord Automod Bot
 
 this is the type of thing that not a lot of people understand. I have had it on the backburner for a while as it is going to cost a lot of money and likely will need a multi model setup to create the per-guild learning outcome that i desire. That said I have been working on it for a while and I think that I have figured it out. It is going to use the openai moderation endpoint as a point of reference and a more vanilla and trainable model to act as the go-between for the actual per guild enforcement of policy. My only issue now is how to deal with the idea of latency and where to store the mass amount of short term data that the bot will need to be effective.
-
-</details>
 
 [(Back to top)](#toc)
 
