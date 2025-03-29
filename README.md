@@ -12,7 +12,7 @@
 
 - 📫 How to reach me:
 
-  Email: [mailto:austin@thedarkweb.store](me)
+  Email: [me](mailto:austin@thedarkweb.store)
 
   Telephone: [@voicemail](tel:6466559948)
 
