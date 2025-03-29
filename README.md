@@ -5,25 +5,103 @@
 ### Hi there 👋
 
 - 🔭 I’m currently working on
-  * (AWFixer Industries)[https://awfixer.dev)
+  * [recovering from a stroke](https://awfixer.blog/life-post-stroke)
 
 - 🌱 I’m currently learning
   * *crickets chirp* about how to live as a Disabled Autistic Man
-  
+
 - 📫 How to reach me:
 
-  Email: austin@thedarkweb.store
-  
-  Twitter: [@awfixer](https://twitter.com/awfixer)
-  
+  Email: [mailto:austin@thedarkweb.store](me)
+
+  Telephone: [@voicemail](tel:6466559948)
+
+  Signal: [@signalgroup](https://signal.group/)
+
+  Telegram: [@telegramchannel](https://t.me/)
+
   Discord:
 
-  [![Discord Presence](https://lanyard-profile-readme.vercel.app/api/940285292944961537?hideDiscrim=true)](https://discord.com/users/940285292944961537)
-  
-- Discord Servers:
-  
-  [![widget](https://inv.wtf/widget/austinscave)](https://discord.gg/austinscave)
-  
-- GitHub Stats
+  [![austins cave](https://invidget.switchblade.xyz/austinscave)](https://discord.gg/austinscave)
 
-  ![Github stats](https://github-readme-stats.vercel.app/api?username=awfixer&theme=blueberry&count_private=true&hide_border=true&line_height=25)
+![metrics](https://raw.githubusercontent.com/awfixer/awfixer/refs/heads/main/github-metrics.svg)
+
+<div align="center">
+
+# TOC
+
+<h2>
+  Table of Contents
+</h2>
+
+<h3>
+
+<details>
+
+    <summary>Table of Contents</summary>
+
+<a href="#projects">Projects</a>
+<a href="#personal">Personal</a>
+<a href="#support">Support</a>
+<a href="#values">Values</a>
+<a href="#goals">Goals</a>
+
+</details>
+
+
+
+[(Back to top)](#toc)
+
+# Projects
+
+<details>
+
+<summary></summary>
+
+</details>
+
+
+[(Back to top)](#toc)
+
+# Personal
+
+<details>
+
+<summary></summary>
+
+</details>
+
+
+[(Back to top)](#toc)
+
+# Support
+
+<details>
+
+<summary></summary>
+
+</details>
+
+
+[(Back to top)](#toc)
+
+# Values
+
+<details>
+
+<summary></summary>
+
+</details>
+
+
+[(Back to top)](#toc)
+
+# Goals
+
+<details>
+
+<summary></summary>
+
+</details>
+
+[(Back to top)](@toc)
