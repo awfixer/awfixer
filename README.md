@@ -58,6 +58,8 @@ read more [Here](readmes/webhookformatter.md)
 
 this is the type of thing that not a lot of people understand. I have had it on the backburner for a while as it is going to cost a lot of money and likely will need a multi model setup to create the per-guild learning outcome that i desire. That said I have been working on it for a while and I think that I have figured it out. It is going to use the openai moderation endpoint as a point of reference and a more vanilla and trainable model to act as the go-between for the actual per guild enforcement of policy. My only issue now is how to deal with the idea of latency and where to store the mass amount of short term data that the bot will need to be effective.
 
+read more [Here](readmes/aiautomod.md)
+
 [(Back to top)](#toc)
 
 # Personal
