@@ -32,19 +32,12 @@
   Table of Contents
 </h2>
 
-<h3>
-
-<details>
-
-<summary>Table of Contents</summary>
 
 <a href="#projects">Projects</a>
 <a href="#personal">Personal</a>
 <a href="#support">Support</a>
 <a href="#values">Values</a>
 <a href="#goals">Goals</a>
-
-</details>
 
 </div>
 
