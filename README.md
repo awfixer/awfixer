@@ -60,13 +60,12 @@ These are more of my personal projects, as they solve problems I often have pers
 
 </details>
 
-<details>
 
-<summary>Webhook Formatter</summary>
+# Webhook Formatter
 
 This is one of those things where you dont understand how much you will love it until you use it. I personally have had to struggle with the idea of getting my webhooks to work between different platforms for a while, and it is not nearly as easy as people like to say it is. So I have taken the time to work on a way to do it automatically. Admittedly the version that i use myself is not good at all and needs a lot of work, though i am working on a dashboard that will make it much more intunitive to use and friendly to not so technical people.
 
-</details>
+read more [Here](readmes/webhookformatter.md)
 
 <details>
 
