@@ -2,10 +2,25 @@
 
 <h1 align="center">Just a Simple Developer</h1>
 
-<h1 align="center">Currently on break</h1>
+<div align="center">
 
-join my discord 
+<h3>Currently working on <a href="https://dislang.awfixer.wiki">Dislang</a></h3>
+<h4>The new premier way of writing Discord bots</h4>
 
-[![discord](https://invidget.switchblade.xyz/robotland)](https://discord.gg/robotland)
+![Alt](https://repobeats.axiom.co/api/embed/12bb50a4a5d7448f1783d80a4c3f0d65c81dc7fa.svg "Repobeats analytics image")
 
-for any questions
+ 📫 How to reach me:
+
+  Email: austin@awfixer.me
+
+  Twitter: [@awfixer](https://twitter.com/awfixer)
+
+  Am I alive?
+
+  [![Discord Presence](https://lanyard-profile-readme.vercel.app/api/940285292944961537?hideDiscrim=true)](https://discord.com/users/940285292944961537)
+
+ My Discord Server:
+
+  [![widget](https://invidget.switchblade.xyz/robotland)](https://discord.awfixer.me)
+
+</div>
