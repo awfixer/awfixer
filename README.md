@@ -6,6 +6,6 @@
 
 join my discord 
 
-[![discord](https://invidget.switchblade.xyz/austinscave)](https://discord.gg/austinscave)
+[![discord](https://invidget.switchblade.xyz/robotland)](https://discord.gg/robotland)
 
 for any questions
