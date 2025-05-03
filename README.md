@@ -4,10 +4,7 @@
 
 <div align="center">
 
-<h3>Currently working on <a href="https://axyl.org">axyl-os</a></h3>
-<h4>The new premier way of writing Discord bots</h4>
-
-![Alt](https://repobeats.axiom.co/api/embed/12bb50a4a5d7448f1783d80a4c3f0d65c81dc7fa.svg "Repobeats analytics image")
+![Alt](https://raw.githubusercontent.com/awfixer/awfixer/280a928fc8cbccf887047417aaf9fbcd873b7430/github-metrics.svg)
 
  📫 How to reach me:
 
