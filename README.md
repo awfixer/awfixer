@@ -21,6 +21,6 @@
 
  My Discord Server:
 
-  [![widget](https://invidget.switchblade.xyz/robotland)](https://discord.awfixer.me)
+  [![widget](https://invidget.switchblade.xyz/awfixer)](https://discord.awfixer.me)
 
 </div>
