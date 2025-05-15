@@ -10,14 +10,12 @@
 
   Email: austin@awfixer.me
 
-  Twitter: [@awfixer](https://twitter.com/awfixer)
+  Cal: [awfixer](https://cal.com/awfixer)
+
 
   Am I alive?
 
   [![Discord Presence](https://lanyard-profile-readme.vercel.app/api/940285292944961537?hideDiscrim=true)](https://discord.com/users/940285292944961537)
 
- My Discord Server:
-
-  [![widget](https://invidget.switchblade.xyz/awfixer)](https://discord.awfixer.me)
 
 </div>
