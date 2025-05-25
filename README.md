@@ -2,9 +2,15 @@
 
 <h1 align="center">Just a Simple Developer</h1>
 
-<div align="center">
+I am the Founder of [AWFixer Industries](https://awfixer.com)
 
-![Alt](https://raw.githubusercontent.com/awfixer/awfixer/280a928fc8cbccf887047417aaf9fbcd873b7430/github-metrics.svg)
+our Current Major Projects are:
+- [Dislang](https://dislang.awfixer.com?ref=austinsreadme)
+- [AWFixerOS](https://awfixeros.site?ref=austinreadme)
+- [CodeConvert](https://codeconvert.awfixer.com?ref=austinsreadme)
+- [AWFixerDB](https://db.awfixer.dev?ref=austinsreadme)
+- [AWFixer Academy](https://awfixer.academy?ref=austinsreadme)
+- [AWFixer Foundation](https://awfixer.foundation?ref=austinsreadme)
 
  📫 How to reach me:
 
@@ -12,10 +18,20 @@
 
   Cal: [awfixer](https://cal.com/awfixer)
 
+  my blog: [The Pragmatic Blog](https://awfixer.blog?ref=austinsreadme)
+
+<div align="center">
+
+  Discord:
+
+  [![Discord Server Embed](https://invidget.switchblade.xyz/awfixer)](https://awfixer.link/discord)
 
   Am I alive?
 
   [![Discord Presence](https://lanyard-profile-readme.vercel.app/api/940285292944961537?hideDiscrim=true)](https://discord.com/users/940285292944961537)
 
+<h2>Stuff I am doing</h2>
+
+![Alt](https://raw.githubusercontent.com/awfixer/awfixer/280a928fc8cbccf887047417aaf9fbcd873b7430/github-metrics.svg)
 
 </div>
