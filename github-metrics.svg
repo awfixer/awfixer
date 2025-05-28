@@ -303,7 +303,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>awfixer-org/cloudinfra</span>
-                                        <span>created 20 days ago</span>
+                                        <span>created 21 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">
@@ -3181,7 +3181,7 @@
                 <div class="row">
                     <section class="largeable-column-fields">
                         <div class="field" style="padding-left: 31px">
-                            <b style="color: #7FEC11">Your fortune: Bad Luck</b>
+                            <b style="color: #BAC200">Your fortune: Average Luck</b>
                         </div>
                     </section>
                 </div>
@@ -3525,7 +3525,7 @@
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 28 May 2025, 08:06:21 (timezone America/Los_Angeles) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 28 May 2025, 09:06:47 (timezone America/Los_Angeles) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
