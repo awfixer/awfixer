@@ -8,9 +8,7 @@
 
 you can read more about my work with nixos in the following posts:
 
--
--
--
+[post one](post) | []() | []()
 
 </div>
 
