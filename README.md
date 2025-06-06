@@ -4,7 +4,7 @@
 
 <h1>Just a Simple Developer</h1>
 
-<h2>I am Currently in love with nixos</h2>
+<h2>I am Currently in love with <a href="https://nixos.org/?ref=awfixer">nixos</a></h2>
 
 you can read more about my work with nixos in the following posts:
 
