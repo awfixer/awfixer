@@ -12,13 +12,10 @@ you can read more about my work with nixos in the following posts:
 
 </div>
 
-I am the Founder of [AWFixer Industries](https://info.awfixer.com)
-
-our Current Major Projects are:
-- [Dislang](https://dislang.awfixer.com?ref=austinsreadme)
+My Current Major Projects are:
 - [AWFixerOS](https://awfixeros.site?ref=austinreadme)
-- [CodeConvert](https://codeconvert.awfixer.com?ref=austinsreadme)
-- [AWFixer Academy](https://awfixer.academy?ref=austinsreadme)
+- [CodeConvert](https://github.com/awfixer-org/codeconvert)
+- [DeepMind](https://github.com/awi-deepmind)
 
  📫 How to reach me:
 
@@ -29,6 +26,10 @@ our Current Major Projects are:
   my blog: [The Pragmatic Blog](https://awfixer.blog?ref=austinsreadme)
 
 <div align="center">
+
+<h2>Most of My Stuff is Powered by Digital Ocaean, so  if you click this link and create an account, when you spend $25 I get some help with my bill too :)</h2>
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=ff2ff3528450&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
   Discord:
 
