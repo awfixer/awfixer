@@ -43,4 +43,6 @@ My Current Major Projects are:
 
 ![Alt](https://raw.githubusercontent.com/awfixer/awfixer/280a928fc8cbccf887047417aaf9fbcd873b7430/github-metrics.svg)
 
+![](https://komarev.com/ghpvc/?username=awfixer)
+
 </div>
