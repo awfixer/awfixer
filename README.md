@@ -16,7 +16,7 @@
 [@AxylProjects]: https://github.com/axyl-os
 [my blog]: https://awfixer.blog
 [stuff]: https://github.com/awfixers-stuff
-[images]: https://github.com/awfixers-stuff/images-site
+[images]: https://github.com/awfixers-stuff/awpapers
 [research]: https://github.com/awfixers-stuff/research
 
 I'm .a, more commonly known as awfixer/fixer on various parts of interwebs
