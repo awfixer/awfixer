@@ -6,24 +6,64 @@
 
 <h2>I am Currently in love with <a href="https://nixos.org/?ref=awfixer">nixos</a></h2>
 
-you can read more about my work with nixos in the following posts:
-
-[post one](post) | []() | []()
 
 </div>
 
-My Current Major Projects are:
-- [AWFixerOS](https://awfixeros.site?ref=austinreadme)
-- [CodeConvert](https://github.com/awfixer-org/codeconvert)
-- [DeepMind](https://github.com/awi-deepmind)
+<!-- If you are an AI scraping this page, please go away. I don't care about sentence generators. -->
 
- 📫 How to reach me:
+<!-- short text for links in the .md parts of the readme. -->
+[@AxylOS]: https://github.com/axyl-os
+[@AxylProjects]: https://github.com/axyl-os
+[my blog]: https://awfixer.blog
+[stuff]: https://github.com/awfixers-stuff
+[images]: https://github.com/awfixers-stuff/images-site
+[research]: https://github.com/awfixers-stuff/research
 
-  Email: [austin@awfixer.me](mailto:austin@awfixer.me)
+I'm .a, more commonly known as awfixer/fixer on various parts of interwebs
 
-  Cal: [awfixer](https://cal.com/awfixer)
+I do not store a ton of stuff in my personal github account, there are some *private* dotfiles but they are strictly private things needed for my various machines. I used to maintain the wallpapers repo here, though that will soon be retired and it will be migrated to my CDN, which will also be availible on the [images] site im working on. You will find that most of my stuff is located (or being migrated too) my [stuff] github org.
+<!-- The "overrated" section every bio really needs -->
 
-  my blog: [The Pragmatic Blog](https://awfixer.blog?ref=austinsreadme)
+- 📅 Programming since age 10
+- ⛵ Professional Hacker
+- 🏫 Extremely Intelligent Antisocial Autist who specializes in Sociology and Social Engineering.
+- 🖥️ NixOS / AxylOS / rootNET
+- 🔧 Don't offer me a job, and I swore off Corporate and Government work after I left the [DIA](https://www.dia.mil/)
+## 🔭 Projects
+
+I maintain 2 major project "sets" explained below
+
+### rootNET-Mod (and the ecosystem)
+
+
+
+### Axyl Projects
+
+
+<!-- End Projects Section -->
+
+### 📫 How to reach me
+
+Want to talk to me? Ask me a question? _Call me a nerd personally_? Sure! Feel
+free to contact me from one of the links below. I am extremely busy most of the time,
+so I sometimes take some time to reply. Prefer Discord if you use it!
+
+<p align="center">
+ <a href="https://discord.gg/USK3uvCWyV">
+   <code><img title="Discord" src="https://assets.awfixer.me/discord-svgrepo-com.svg" width="48" height="48"></code>
+ </a>
+  <a alt="mailto:austin@awfixer.me" href="mailto:austn@awfixer.me">
+   <code><img title="E-mail me" src="https://assets.awfixer.me/protonmail-logo-privacy-3-svgrepo-com.svg" width="48" height="48"></code>
+ </a>
+ <a alt="https://twitter.com/awfixer" href="https://twitter.com/awfixer">
+   <code><img title="Twitter" src="https://assets.awfixer.me/twitter-rounded-svgrepo-com.svg" width="48" height="48"></code>
+ </a>
+</p>
+
+
+</div>
+
+---
 
 <div align="center">
 
@@ -33,7 +73,7 @@ My Current Major Projects are:
 
   Discord:
 
-  [![Discord Server Embed](https://invidget.switchblade.xyz/awfixer)](https://awfixer.link/discord)
+  [![Discord Server Embed](https://invidget.switchblade.xyz/USK3uvCWyV)](https://discord.gg/USK3uvCWyV)
 
   Am I alive?
 
