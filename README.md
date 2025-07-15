@@ -35,9 +35,12 @@ I maintain 2 major project "sets" explained below
 
 ### rootNET-Mod (and the ecosystem)
 
+this is on hold for the time being, I will publish a post on my [Blog](https://awfixer.blog) about this later
 
 
 ### Axyl Projects
+
+Axyl Projects is an LLC that supervises the projects [AxylOS](https://github.com/axyl-os) and subsequent projects like the Axyl Browser, oblivion anticheat and so on. This is a cool projects set and I encourage you to check it out!
 
 
 <!-- End Projects Section -->
@@ -49,7 +52,7 @@ free to contact me from one of the links below. I am extremely busy most of the 
 so I sometimes take some time to reply. Prefer Discord if you use it!
 
 <p align="center">
- <a href="https://discord.gg/USK3uvCWyV">
+ <a href="https://inv.wtf/deadinside">
    <code><img title="Discord" src="https://assets.awfixer.me/discord-svgrepo-com.svg" width="48" height="48"></code>
  </a>
   <a alt="mailto:austin@awfixer.me" href="mailto:austn@awfixer.me">
