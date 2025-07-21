@@ -19,7 +19,7 @@
 [images]: https://github.com/awfixers-stuff/awpapers
 [research]: https://github.com/awfixers-stuff/research
 
-I'm .a, more commonly known as awfixer/fixer on various parts of interwebs
+I'm a, more commonly known as awfixer/fixer/austin/theautist on various parts of interwebs
 
 I do not store a ton of stuff in my personal github account, there are some *private* dotfiles but they are strictly private things needed for my various machines. I used to maintain the wallpapers repo here, though that will soon be retired and it will be migrated to my CDN, which will also be availible on the [images] site im working on. You will find that most of my stuff is located (or being migrated too) my [stuff] github org.
 <!-- The "overrated" section every bio really needs -->
@@ -30,6 +30,11 @@ I do not store a ton of stuff in my personal github account, there are some *pri
 - 🖥️ NixOS / AxylOS / rootNET
 - 🔧 Don't offer me a job, and I swore off Corporate and Government work after I left the [DIA](https://www.dia.mil/)
 ## 🔭 Projects
+
+### AWFixerOS
+
+my personal OS. Designed on top of NixOS to be used for everything. Various profiles for various moods. Cyber, OffSec, Fun, Security, Dev, Work, Education etc.
+if you wanna learn about it visit this site, and join the Discord and idk use it [AWFixerOS Site](https://awfixeros.site)
 
 I maintain 2 major project "sets" explained below
 
