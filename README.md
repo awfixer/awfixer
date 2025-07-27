@@ -4,11 +4,11 @@
 
 <h1>Just a Simple Developer</h1>
 
-## DevOps is asking the question
+# DevOps is asking the question
 
 *"what if we bring best practices in software engineering to infrastructure?"*
 
-### *and never answering it*
+## *and never answering it*
 
 </div>
 
@@ -93,6 +93,9 @@ so I sometimes take some time to reply. Prefer Discord if you use it!
 <h2>Stuff I am doing</h2>
 
 ![Alt](https://raw.githubusercontent.com/awfixer/awfixer/280a928fc8cbccf887047417aaf9fbcd873b7430/github-metrics.svg)
+
+
+im watching you
 
 ![](https://komarev.com/ghpvc/?username=awfixer)
 
