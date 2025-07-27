@@ -4,8 +4,11 @@
 
 <h1>Just a Simple Developer</h1>
 
-<h2>I am Currently in love with <a href="https://nixos.org/?ref=awfixer">nixos</a></h2>
+## DevOps is asking the question
 
+*"what if we bring best practices in software engineering to infrastructure?"*
+
+### *and never answering it*
 
 </div>
 
