@@ -84,7 +84,7 @@ so I sometimes take some time to reply. Prefer Discord if you use it!
 
   Discord:
 
-  [![Discord Server Embed](https://invidget.switchblade.xyz/USK3uvCWyV)](https://discord.gg/USK3uvCWyV)
+  [![Discord Server Embed]([https://invidget.switchblade.xyz/USK3uvCWyV](https://inv.wtf/widget/deadinside))]([https://discord.gg/USK3uvCWyV](https://inv.wtf/deadinside))
 
   Am I alive?
 
