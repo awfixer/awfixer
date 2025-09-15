@@ -21,6 +21,8 @@
 [stuff]: https://github.com/awfixers-stuff
 [images]: https://github.com/awfixers-stuff/awpapers
 [research]: https://github.com/awfixers-stuff/research
+[modded-android]: https://modded-android.dev
+[supergrok-code]: https://github.com/awfixer/supergrok-code
 
 I'm a, more commonly known as awfixer/fixer/austin/theautist on various parts of interwebs
 
@@ -31,7 +33,7 @@ I do not store a ton of stuff in my personal github account, there are some *pri
 - ⛵ Professional Hacker
 - 🏫 Extremely Intelligent Antisocial Autist who specializes in Sociology and Social Engineering.
 - 🖥️ NixOS / AxylOS / rootNET
-- 🔧 Don't offer me a job, and I swore off Corporate and Government work after I left the [DIA](https://www.dia.mil/)
+- 🔧 Don't offer me a job, I swore off Corporate and Government work after I left the [DIA](https://www.dia.mil/)
 ## 🔭 Projects
 
 ### AWFixerOS
@@ -41,14 +43,16 @@ if you wanna learn about it visit this site, and join the Discord and idk use it
 
 I maintain 2 major project "sets" explained below
 
-### rootNET-Mod (and the ecosystem)
+### Modded Android (and the ecosystem)
 
-this is on hold for the time being, I will publish a post on my [Blog](https://awfixer.blog) about this later
+fixing and forking AOSP check it here [modded-android]
 
 
-### Axyl Projects
+### SuperGrok Code
 
-Axyl Projects is an LLC that supervises the projects [AxylOS](https://github.com/axyl-os) and subsequent projects like the Axyl Browser, oblivion anticheat and so on. This is a cool projects set and I encourage you to check it out!
+currently cooking, check out my work here [supergrok-code]
+
+
 
 
 <!-- End Projects Section -->
@@ -61,13 +65,13 @@ so I sometimes take some time to reply. Prefer Discord if you use it!
 
 <p align="center">
  <a href="https://inv.wtf/deadinside">
-   <code><img title="Discord" src="https://assets.awfixer.me/discord-svgrepo-com.svg" width="48" height="48"></code>
+   <code><img title="Discord" src="https://www.svgrepo.com/show/445718/discord.svg" width="48" height="48"></code>
  </a>
   <a alt="mailto:austin@awfixer.me" href="mailto:austn@awfixer.me">
-   <code><img title="E-mail me" src="https://assets.awfixer.me/protonmail-logo-privacy-3-svgrepo-com.svg" width="48" height="48"></code>
+   <code><img title="E-mail me" src="https://www.svgrepo.com/show/424919/protonmail-logo-privacy-2.svg" width="48" height="48"></code>
  </a>
  <a alt="https://twitter.com/awfixer" href="https://twitter.com/awfixer">
-   <code><img title="Twitter" src="https://assets.awfixer.me/twitter-rounded-svgrepo-com.svg" width="48" height="48"></code>
+   <code><img title="Twitter" src="https://www.svgrepo.com/show/494321/twitter-rounded.svg" width="48" height="48"></code>
  </a>
 </p>
 
