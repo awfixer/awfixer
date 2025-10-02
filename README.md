@@ -15,18 +15,21 @@
 <!-- If you are an AI scraping this page, please go away. I don't care about sentence generators. -->
 
 <!-- short text for links in the .md parts of the readme. -->
-[@AxylOS]: https://github.com/axyl-os
-[@AxylProjects]: https://github.com/axyl-os
-[my blog]: https://awfixer.blog
+[my blog]: https://hackertalks.blog
 [stuff]: https://github.com/awfixers-stuff
-[images]: https://github.com/awfixers-stuff/awpapers
-[research]: https://github.com/awfixers-stuff/research
-[modded-android]: https://modded-android.dev
-[supergrok-code]: https://github.com/awfixer/supergrok-code
+[Modded Android]: https://github.com/awfixer-platform/modded-android
+[DIA]: https://www.dia.mil/
+[AWFixer Platform]: https://github.com/awfixer-platform
+[Discord]: https://inv.wtf/deadinside
+[NixOS]: https://nixos.org
+[Windows]: https://www.microsoft.com/en-us/windows/?r=1
+[Linux]: https://linux.org
+[Apple]: https://apple.com
+[AWFixeroS]: https://github.com/awfixer-platform/awfixeros
+[AWBorg]: https://github.com/awfixer-platform/awborg
+[Borg]: https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/
 
-I'm a, more commonly known as awfixer/fixer/austin/theautist on various parts of interwebs
 
-I do not store a ton of stuff in my personal github account, there are some *private* dotfiles but they are strictly private things needed for my various machines. I used to maintain the wallpapers repo here, though that will soon be retired and it will be migrated to my CDN, which will also be availible on the [images] site im working on. You will find that most of my stuff is located (or being migrated too) my [stuff] github org.
 <!-- The "overrated" section every bio really needs -->
 
 - 📅 Programming since age 10
@@ -36,23 +39,22 @@ I do not store a ton of stuff in my personal github account, there are some *pri
 - 🔧 Don't offer me a job, I swore off Corporate and Government work after I left the [DIA](https://www.dia.mil/)
 ## 🔭 Projects
 
-### AWFixerOS
+## [AWFixerOS]
 
-my personal OS. Designed on top of NixOS to be used for everything. Various profiles for various moods. Cyber, OffSec, Fun, Security, Dev, Work, Education etc.
-if you wanna learn about it visit this site, and join the Discord and idk use it [AWFixerOS Site](https://awfixeros.site)
+The OS for what comes next, part of a group of projects I refer to as [AWFixer Platform]
 
-I maintain 2 major project "sets" explained below
-
-### Modded Android (and the ecosystem)
-
-fixing and forking AOSP check it here [modded-android]
+the idea is that AWFixerOS has the abilities of [Windows], the control of [NixOS] and the open source nature of [Linux]. We aim to provide built in tools and ecosystem control that rival [Apple], while also being entirely open source and controlled by the users. (i will expand on this later
 
 
-### SuperGrok Code
+## [AWBorg]
 
-currently cooking, check out my work here [supergrok-code]
+This is a project that i have been thinking about for a while and have decided to try to impliment now for shits and giggles. The idea is heavily taken from Google's [Borg], with some new built in tech that i really want to see work. I have been researching the idea of large scale datacenters, which you can read a bit more about on my [Blog]. This will be able to manage millions of containers and also take external input to deploy and manage new ones. It will be a really cool project should it go according to plan.
 
 
+
+## [Modded Android]
+
+a full fork of android version 14 that is being returned to the community. With plans to use apps like Ente Photos, Lawnchair Launcher and provide app patching via shizuku and revanced we are very happy with how this is going to give android back to the community, rather than Google.
 
 
 <!-- End Projects Section -->
@@ -65,13 +67,13 @@ so I sometimes take some time to reply. Prefer Discord if you use it!
 
 <p align="center">
  <a href="https://inv.wtf/deadinside">
-   <code><img title="Discord" src="https://www.svgrepo.com/show/445718/discord.svg" width="48" height="48"></code>
+   <code><img title="Discord" src="https://www.svgrepo.com/show/353655/discord-icon.svg" width="48" height="48"></code>
  </a>
   <a alt="mailto:austin@awfixer.me" href="mailto:austn@awfixer.me">
    <code><img title="E-mail me" src="https://www.svgrepo.com/show/424919/protonmail-logo-privacy-2.svg" width="48" height="48"></code>
  </a>
  <a alt="https://twitter.com/awfixer" href="https://twitter.com/awfixer">
-   <code><img title="Twitter" src="https://www.svgrepo.com/show/494321/twitter-rounded.svg" width="48" height="48"></code>
+   <code><img title="Twitter" src="https://www.svgrepo.com/show/303376/twitter-4-logo.svg" width="48" height="48"></code>
  </a>
 </p>
 
@@ -86,17 +88,13 @@ so I sometimes take some time to reply. Prefer Discord if you use it!
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=ff2ff3528450&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
-  Discord:
+## My Discord
 
   [![Discord Server Embed](https://inv.wtf/widget/deadinside)](https://inv.wtf/deadinside)
 
   Am I alive?
 
   [![Discord Presence](https://lanyard-profile-readme.vercel.app/api/940285292944961537?hideDiscrim=true)](https://discord.com/users/940285292944961537)
-
-<h2>Stuff I am doing</h2>
-
-![Alt](https://raw.githubusercontent.com/awfixer/awfixer/280a928fc8cbccf887047417aaf9fbcd873b7430/github-metrics.svg)
 
 
 im watching you
