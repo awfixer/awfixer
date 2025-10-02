@@ -43,7 +43,7 @@
 
 The OS for what comes next, part of a group of projects I refer to as [AWFixer Platform]
 
-the idea is that AWFixerOS has the abilities of [Windows], the control of [NixOS] and the open source nature of [Linux]. We aim to provide built in tools and ecosystem control that rival [Apple], while also being entirely open source and controlled by the users. (i will expand on this later
+the idea is that AWFixerOS has the abilities of [Windows], the control of [NixOS] and the open source nature of [Linux]. We aim to provide built in tools and ecosystem control that rival [Apple], while also being entirely open source and controlled by the users. (i will expand on this later)
 
 
 ## [AWBorg]
