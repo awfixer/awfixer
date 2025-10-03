@@ -34,9 +34,13 @@
 
 - 📅 Programming since age 10
 - ⛵ Professional Hacker
-- 🏫 Extremely Intelligent Antisocial Autist who specializes in Sociology and Social Engineering.
-- 🖥️ NixOS / AxylOS / rootNET
-- 🔧 Don't offer me a job, I swore off Corporate and Government work after I left the [DIA](https://www.dia.mil/)
+- 🏫 Disabled Human. had a stroke in 2023.
+- 🖥️ [NixOS] / [AWFixerOS] / [Modded Android]
+- 🔧 if you are offering me a job, I swore off corporate work so I will only work for companies with values that align with mine, on a short term contractual basis and only for very very large sums of money.
+
+> [!NOTE]
+> you may find that some of my projects are currently very sporadically maintained and developed, it is because a critical part of my family unit is having health issues, and i am dedicating a large portion of my time to making money for her and taking care of her. Thank you for understanding.
+
 ## 🔭 Projects
 
 ## [AWFixerOS]
@@ -48,7 +52,11 @@ the idea is that AWFixerOS has the abilities of [Windows], the control of [NixOS
 
 ## [AWBorg]
 
+> "The Grand summary of this software is that you don't need it. you didn't need kubernetes and this software will make you miss the simplicity of kubernetes."
+
 This is a project that i have been thinking about for a while and have decided to try to impliment now for shits and giggles. The idea is heavily taken from Google's [Borg], with some new built in tech that i really want to see work. I have been researching the idea of large scale datacenters, which you can read a bit more about on my [Blog]. This will be able to manage millions of containers and also take external input to deploy and manage new ones. It will be a really cool project should it go according to plan.
+
+I am usually more reserved about the way that I publish some of these projects, though the sheer scale of what this software is being designed to do makes me a bit less feareless about it so expect a write up on [my blog] pretty soon.
 
 
 
@@ -58,6 +66,22 @@ a full fork of android version 14 that is being returned to the community. With 
 
 
 <!-- End Projects Section -->
+
+### 📖 currently learning:
+
+im currently learning the languages elixir, nix, gleam and Go. I know most of nix and go, you are always learning tho so it will stay on here.
+
+## 💲Support Me
+
+<a href='https://ko-fi.com/Y8Y5TPYQF' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J5H8AXQTEZ7QQ">
+  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
+</a>
+
+[![Support on Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/awfixer)
+
+<a href="https://www.buymeacoffee.com/awfixer" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ### 📫 How to reach me
 
