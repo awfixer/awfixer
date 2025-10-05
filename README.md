@@ -38,6 +38,10 @@
 - 🖥️ [NixOS] / [AWFixerOS] / [Modded Android]
 - 🔧 if you are offering me a job, I swore off corporate work so I will only work for companies with values that align with mine, on a short term contractual basis and only for very very large sums of money.
 
+if you need any other reason not to hire me:
+
+Matthew 18:6 - “But whoever causes one of these little ones who believe in me to sin, it would be better for him to have a great millstone fastened around his neck and to be drowned in the depth of the sea.”
+
 > [!NOTE]
 > you may find that some of my projects are currently very sporadically maintained and developed, it is because a critical part of my family unit is having health issues, and i am dedicating a large portion of my time to making money for her and taking care of her. Thank you for understanding.
 
