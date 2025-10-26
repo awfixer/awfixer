@@ -79,54 +79,53 @@ a full fork of android version 14 that is being returned to the community. With 
   <summary><h2> AJ's Basement </h2></summary>
 
   This is my personal community for people who are personal friends, members of my [Ko-Fi], [Patreon], [Github Sponsors], [BuyMeACoffee], or help on the moderation staff/team of a project I manage. Though it is open to other people who apply to join.
-
-  [![Discord Server Embed](https://inv.wtf/widget/deadinside)](https://inv.wtf/deadinside)
   
 </details>
+
+  [![Discord Server Embed](https://inv.wtf/widget/deadinside)](https://inv.wtf/deadinside)
 
 <details>
   <summary><h2> Hacker Central </h2></summary>
 
   this is the community for [my blog] and we talk about cool things related to tech and privacy
-
-``[![Discord Server Embed](https://inv.wtf/widget/hackercentral)](https://inv.wtf/hackercentral)
   
 </details>
+
+  [![Discord Server Embed](https://inv.wtf/widget/hackercentral)](https://inv.wtf/hackercentral)
 
 <details>
   <summary><h2> Modded Android </h2></summary>
 
   The Modded Android Project Community is a community where we are collecting people who wish to work on, help with, and eventually - use the Modded Android operating system
-
-``[![Discord Server Embed](https://inv.wtf/widget/moddedandroid)](https://inv.wtf/moddedandroid)
   
 </details>
+
+  [![Discord Server Embed](https://inv.wtf/widget/moddedandroid)](https://inv.wtf/moddedandroid)
 
 <details>
   <summary><h2> That AJ Show </h2></summary>
   
   This is the community for The AJ show that is being worked on by myself and my best friend Jinx.
-
-``[![Discord Server Embed](https://inv.wtf/widget/thatajshow)](https://inv.wtf/thatajshow)
   
 </details>
+
+  [![Discord Server Embed](https://inv.wtf/widget/thatajshow)](https://inv.wtf/thatajshow)
 
 <details>
   <summary><h2> The Autists </h2></summary>
 
   This is a community for a github org called [The Autists](https://github.com/the-autists)
-
-``[![Discord Server Embed](https://inv.wtf/widget/theautists)](https://inv.wtf/theautists)
   
 </details>
+
+  [![Discord Server Embed](https://inv.wtf/widget/theautists)](https://inv.wtf/theautists)
 
 <details>
   <summary><h2> The LA Community </h2></summary>
-
-
-``[![Discord Server Embed](https://inv.wtf/widget/thelacommunity)](https://inv.wtf/thelacommunity)
   
 </details>
+
+  [![Discord Server Embed](https://inv.wtf/widget/thelacommunity)](https://inv.wtf/thelacommunity)
 
 <!--
 <details>
@@ -182,6 +181,54 @@ I know most of nix and go, you are always learning tho so it will stay on here.
     </td>
   </tr>
 </table>
+
+<table align="center" style="border-collapse: collapse; margin: 0 auto;">
+  <tr>
+    <td style="text-align: center; padding: 10px;">
+      <a href="https://bitcoin.org/" target="_blank">
+        <img src="https://raw.githubusercontent.com/modded-android/.github/refs/heads/main/images/btc.svg" alt="Bitcoin Logo" style="height: 50px; width: auto; border: 0;">
+      </a>
+      <br>
+      Bitcoin (BTC)
+      <br>
+      <code>bc1q28ept40pz26y8m0j3ej522738g0vtvhrr9dhyl</code>
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <a href="https://ethereum.org/" target="_blank">
+        <img src="https://raw.githubusercontent.com/modded-android/.github/refs/heads/main/images/eth.svg" alt="Ethereum Logo" style="height: 50px; width: auto; border: 0;">
+      </a>
+      <br>
+      Ethereum (ETH)
+      <br>
+      <code>0x729A7D17d745DA6f1b97f39bEc6f9fa218b39a1D</code>
+    </td>
+ </tr>
+</table>
+
+<table align="center" style="border-collapse: collapse; margin: 0 auto;">
+<tr>
+<td style="text-align: center; padding: 10px;">
+      <a href="https://dogecoin.com/" target="_blank">
+        <img src="https://raw.githubusercontent.com/modded-android/.github/refs/heads/main/images/doge.svg" alt="Dogecoin Logo" style="height: 50px; width: auto; border: 0;">
+      </a>
+      <br>
+      Dogecoin (DOGE)
+      <br>
+      <code> DRu3cCJKHmriJ1DtZc8wUbW7C8XhzrkVkq</code>
+    </td>
+    <td style="text-align: center; padding: 10px;">
+      <a href="https://solana.com/" target="_blank">
+        <img src="https://raw.githubusercontent.com/modded-android/.github/refs/heads/main/images/solana.svg" alt="Solana Logo" style="height: 50px; width: auto; border: 0;">
+      </a>
+      <br>
+      Solana (SOL)
+      <br>
+      <code>HKc31GRgS4LSx4VjcjKTb47eXAzgCKoBoLtuHgEz8dku</code>
+    </td>
+  </tr>
+</table>
+
+<br/>
 
 ### 📫 How to reach me
 
