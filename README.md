@@ -17,7 +17,7 @@
 <!-- short text for links in the .md parts of the readme. -->
 [my blog]: https://hackertalks.blog
 [stuff]: https://github.com/awfixers-stuff
-[Modded Android]: https://github.com/awfixer-platform/modded-android
+[Modded Android]: https://github.com/modded-android
 [DIA]: https://www.dia.mil/
 [AWFixer Platform]: https://github.com/awfixer-platform
 [Discord]: https://inv.wtf/deadinside
@@ -25,7 +25,7 @@
 [Windows]: https://www.microsoft.com/en-us/windows/?r=1
 [Linux]: https://linux.org
 [Apple]: https://apple.com
-[AWFixeroS]: https://github.com/awfixer-platform/awfixeros
+[AWFixeroS]: https://github.com/awfixer-os
 [AWBorg]: https://github.com/awfixer-platform/awborg
 [Borg]: https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/
 [Book AWFixer]: https://cal.com/awfixer/paid-meeting
@@ -34,11 +34,13 @@
 [BuyMeACoffee]: https://coff.ee/awfixer
 [Github Sponsors]: https://github.com/sponsors/awfixer
 
-<h1 align="center"> Check out <a href="https://hackertalks.blog"> My Blog </a></h1>
 
-Hi, I'm AWFixer, also known as The Autist. I'm a 21-year-old disabled hacker who had a stroke in 2024 and has been navigating life with a disability ever since. I love technology and crank out code like it's my job—because, well, it pretty much is. My go-to languages are Nix, Gleam, Elixir, Go, and Rust, though necessity sometimes drags me into JavaScript/TypeScript, Ruby, or Java.
+Hi, I'm AWFixer, also known as The Autist, or The Fixer, depending on the platform and/or place you see me. I'm a 21-year-old disabled hacker who had a stroke in 2024 and has been navigating life with a disability ever since. I love technology and crank out code like it's my job—because, well, it pretty much is. My go-to languages are Nix, Gleam, Elixir, Go, and Rust, though necessity sometimes drags me into JavaScript/TypeScript, Ruby, or Java.
 
 Being disabled means I can pour massive amounts of time into writing code and contributing to open-source projects for next to nothing. I also handle community moderation gigs on the cheap. Sure, it comes with perks—like dirt-cheap rent and shorter waits in the ER—but I wouldn't recommend it to just anyone. Thanks to all that extra availability, feel free to treat this like a "[Book AWFixer]" service: hire me to manage one of your projects. After an initial fee, I keep rates low as long as I've got the bandwidth.
+
+> [!NOTE]
+> i am currently doing research into how GPT and BERT based LLMs work, because I want to understand it better. I feel like an advanced understanding of the GPT/BERT models will help me in my endevaour to create LLMs that run on general compute/conventional hardware rather than needing expensive GPU compute.
 
 <!-- The "overrated" section every bio really needs -->
 
@@ -58,6 +60,10 @@ Being disabled means I can pour massive amounts of time into writing code and co
 The OS for what comes next
 
 the idea is that AWFixerOS has the abilities of [Windows], the control of [NixOS] and the open source nature of [Linux]. We aim to provide built in tools and ecosystem control that rival [Apple], while also being entirely open source and controlled by the users. (i will expand on this later)
+
+## SuperEngine (no link for this one, yet.)
+
+The idea behind SuperEngine is sort of simple, yet very complicated at the same time. It serves to be a game engine for games in places like "The Oasis" in the Ready Player One movie. Which is needed for something that I am building.
 
 ## [AWBorg]
 
