@@ -79,6 +79,8 @@ a full fork of android version 14 that is being returned to the community. With 
 
 <!-- End Projects Section -->
 
+<!--
+
 ### 🫂 Communities I own/manage (will keep updating)
 
 <details>
@@ -133,7 +135,6 @@ a full fork of android version 14 that is being returned to the community. With 
 
   [![Discord Server Embed](https://inv.wtf/widget/thelacommunity)](https://inv.wtf/thelacommunity)
 
-<!--
 <details>
   <summary><h2></h2></summary>
 
