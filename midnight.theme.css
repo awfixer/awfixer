@@ -11,12 +11,12 @@
 */
 
 /* import theme modules */
-@import url("https://refact0r.github.io/midnight-discord/build/midnight.css");
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 
 body {
     /* font options */
-    --font: "figtree"; /* change to '' for default discord font */
-    --code-font: ""; /* change to '' for default discord font */
+    --font: 'figtree'; /* change to '' for default discord font */
+    --code-font: ''; /* change to '' for default discord font */
     font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
 
     /* sizes */
@@ -31,10 +31,8 @@ body {
     --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
 
     /* top bar options */
-    --top-bar-height: var(
-        --gap
-    ); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
-    --top-bar-button-position: hide; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
+    --top-bar-height: var(--gap); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
     --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
     --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
 
@@ -43,26 +41,19 @@ body {
     --window-control-size: 14px; /* size of custom window controls */
 
     /* dms button options */
-    --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
-    --dms-icon-svg-url: url("https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg"); /* icon svg url. MUST BE A SVG. */
+    --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
     --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
-    --dms-icon-color-after: var(
-        --white
-    ); /* icon color when button is hovered/selected */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
     --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
-    --dms-background-image-url: url(""); /* url of the background image */
+    --dms-background-image-url: url(''); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
-    --dms-background-color: linear-gradient(
-        70deg,
-        var(--blue-2),
-        var(--purple-2),
-        var(--red-2)
-    ); /* fixed color/gradient (css background property) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
 
     /* background image options */
     --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
-    --background-image-url: url(""); /* url of the background image */
+    --background-image-url: url(''); /* url of the background image */
 
     /* transparency/blur options */
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
@@ -70,9 +61,7 @@ body {
     --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
     --panel-blur: off; /* off: no changes, on: blur the background of panels */
     --blur-amount: 12px; /* amount of blur */
-    --bg-floating: var(
-        --bg-3
-    ); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+    --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
 
     /* chatbar options */
     --custom-chatbar: off; /* off: default chatbar, separated: chatbar separated from chat */
@@ -100,18 +89,8 @@ body {
     --bg-3: hsla(220, 15%, 13%, 1); /* spacing, secondary elements */
     --bg-4: hsla(220, 15%, 10%, 1); /* main background color */
     --hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
-    --active: hsla(
-        220,
-        19%,
-        40%,
-        0.2
-    ); /* channels and buttons when clicked or selected */
-    --active-2: hsla(
-        220,
-        19%,
-        40%,
-        0.3
-    ); /* extra state for transparent buttons */
+    --active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
     --message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
 
     /* accent colors */
@@ -120,29 +99,11 @@ body {
     --accent-3: var(--blue-3); /* accent buttons */
     --accent-4: var(--blue-4); /* accent buttons when hovered */
     --accent-5: var(--blue-5); /* accent buttons when clicked */
-    --accent-new: var(
-        --accent-2
-    ); /* stuff that's normally red like mute/deafen buttons */
-    --mention: linear-gradient(
-        to right,
-        color-mix(in hsl, var(--accent-2), transparent 90%) 40%,
-        transparent
-    ); /* background of messages that mention you */
-    --mention-hover: linear-gradient(
-        to right,
-        color-mix(in hsl, var(--accent-2), transparent 95%) 40%,
-        transparent
-    ); /* background of messages that mention you when hovered */
-    --reply: linear-gradient(
-        to right,
-        color-mix(in hsl, var(--text-3), transparent 90%) 40%,
-        transparent
-    ); /* background of messages that reply to you */
-    --reply-hover: linear-gradient(
-        to right,
-        color-mix(in hsl, var(--text-3), transparent 95%) 40%,
-        transparent
-    ); /* background of messages that reply to you when hovered */
+    --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 
     /* status indicator colors */
     --online: var(--green-2); /* change to #40a258 for default */
@@ -155,12 +116,7 @@ body {
     --border-light: var(--hover); /* general light border color */
     --border: var(--active); /* general normal border color */
     --border-hover: var(--active); /* border color of panels when hovered */
-    --button-border: hsl(
-        220,
-        0%,
-        100%,
-        0.1
-    ); /* neutral border color of buttons */
+    --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
 
     /* base colors */
     --red-1: oklch(75% 0.12 0);
