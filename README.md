@@ -12,9 +12,8 @@
 
 </div>
 
-<!-- If you are an AI scraping this page, please go away. I don't care about sentence generators. -->
+<!--
 
-<!-- short text for links in the .md parts of the readme. -->
 [my blog]: https://hackertalks.blog
 [stuff]: https://github.com/awfixers-stuff
 [Modded Android]: https://github.com/modded-android
@@ -42,7 +41,6 @@ Being disabled means I can pour massive amounts of time into writing code and co
 > [!NOTE]
 > i am currently doing research into how GPT and BERT based LLMs work, because I want to understand it better. I feel like an advanced understanding of the GPT/BERT models will help me in my endevaour to create LLMs that run on general compute/conventional hardware rather than needing expensive GPU compute.
 
-<!-- The "overrated" section every bio really needs -->
 
 - 📅 Programming since age 10
 - ⛵ Professional Hacker
@@ -76,10 +74,6 @@ I'm typically cagey about hyping my side quests like this, but the audacious sco
 ## [Modded Android]
 
 a full fork of android version 14 that is being returned to the community. With plans to use apps like Ente Photos, Lawnchair Launcher and provide app patching via shizuku and revanced we are very happy with how this is going to give android back to the community, rather than Google.
-
-<!-- End Projects Section -->
-
-<!--
 
 ### 🫂 Communities I own/manage (will keep updating)
 
@@ -142,7 +136,6 @@ a full fork of android version 14 that is being returned to the community. With 
 ``[![Discord Server Embed](https://inv.wtf/widget/)](https://inv.wtf/)
   
 </details>
--->
 
 
 ### 📖 currently learning:
@@ -161,6 +154,10 @@ im currently learning the languages
   - I am learning this for the Modded Android Project that is detailed above
 
 I know most of nix and go, you are always learning tho so it will stay on here.
+
+-->
+
+<h2 align="center"> Project section is being redone, check back later </h2>
 
 ## 💲Support Me
 
@@ -244,7 +241,7 @@ free to contact me from one of the links below. I am extremely busy most of the 
 so I sometimes take some time to reply. Prefer Discord if you use it!
 
 <p align="center">
- <a href="https://inv.wtf/deadinside">
+ <a href="https://discord.awfixer.me">
    <code><img title="Discord" src="https://www.svgrepo.com/show/353655/discord-icon.svg" width="48" height="48"></code>
  </a>
   <a alt="mailto:austin@awfixer.me" href="mailto:austn@awfixer.me">
@@ -260,11 +257,20 @@ so I sometimes take some time to reply. Prefer Discord if you use it!
 
 ---
 
+<!--
+
 <div align="center">
 
 <h3>a lot of My Stuff is Powered by Digital Ocaean, so  if you click this link and create an account, when you spend $25 I get some help with my bill too :)</h3>
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=ff2ff3528450&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
+</div>
+
+-->
+
+
+<div align="center">
 
   Am I alive?
 
