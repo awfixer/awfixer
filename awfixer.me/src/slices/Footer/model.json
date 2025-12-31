@@ -44,7 +44,13 @@
                 "type": "Select",
                 "config": {
                   "label": "Platform",
-                  "options": ["Twitter", "LinkedIn", "GitHub", "Instagram", "Facebook"]
+                  "options": [
+                    "Twitter",
+                    "LinkedIn",
+                    "GitHub",
+                    "Instagram",
+                    "Facebook"
+                  ]
                 }
               },
               "url": {

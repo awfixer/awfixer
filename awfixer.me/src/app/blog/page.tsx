@@ -6,13 +6,13 @@ import { createClient } from "@/prismicio";
 
 export default async function BlogPage() {
   const client = createClient();
-  
+
   // Get all blog posts, sorted by publication date
   let blogPosts: any[] = [];
   try {
     blogPosts = await client.getAllByType("blog_post" as any, {
       orderings: [
-        { field: "my.blog_post.publication_date", direction: "desc" }
+        { field: "my.blog_post.publication_date", direction: "desc" },
       ],
       fetch: [
         "blog_post.title",
@@ -21,8 +21,8 @@ export default async function BlogPage() {
         "blog_post.publication_date",
         "blog_post.author",
         "blog_post.reading_time",
-        "blog_post.tags"
-      ]
+        "blog_post.tags",
+      ],
     });
   } catch (error) {
     // Ignore error if blog_post type doesn't exist yet
@@ -53,13 +53,17 @@ export default async function BlogPage() {
                 />
               </div>
             )}
-            
+
             <div className="p-6">
               <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
                 <time dateTime={(post.data as any).publication_date}>
-                  {new Date((post.data as any).publication_date).toLocaleDateString()}
+                  {new Date(
+                    (post.data as any).publication_date,
+                  ).toLocaleDateString()}
                 </time>
-                {(post.data as any).author && <span>• {(post.data as any).author}</span>}
+                {(post.data as any).author && (
+                  <span>• {(post.data as any).author}</span>
+                )}
                 {(post.data as any).reading_time && (
                   <span>• {(post.data as any).reading_time} min read</span>
                 )}
@@ -109,6 +113,7 @@ export default async function BlogPage() {
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Blog | AWFixer",
-    description: "My thoughts on web development, technology, and personal projects",
+    description:
+      "My thoughts on web development, technology, and personal projects",
   };
 }

@@ -18,7 +18,7 @@ const BlogPostList: FC<BlogPostListProps> = ({ slice }) => {
   // Client component - we'll fetch on client side
   const [blogPosts, setBlogPosts] = React.useState<any[]>([]);
   const [loading, setLoading] = React.useState(true);
-  
+
   React.useEffect(() => {
     const fetchBlogPosts = async () => {
       const client = createClient();
@@ -28,7 +28,7 @@ const BlogPostList: FC<BlogPostListProps> = ({ slice }) => {
       try {
         const posts = await client.getAllByType("blog_post" as any, {
           orderings: [
-            { field: "my.blog_post.publication_date", direction: "desc" }
+            { field: "my.blog_post.publication_date", direction: "desc" },
           ],
           limit: limit,
           fetch: [
@@ -37,8 +37,8 @@ const BlogPostList: FC<BlogPostListProps> = ({ slice }) => {
             "blog_post.featured_image",
             "blog_post.publication_date",
             "blog_post.author",
-            "blog_post.uid"
-          ]
+            "blog_post.uid",
+          ],
         });
         setBlogPosts(posts);
       } catch (error) {
@@ -84,7 +84,7 @@ const BlogPostList: FC<BlogPostListProps> = ({ slice }) => {
         <h2 className={styles.title}>
           {slice.primary.title || "Recent Blog Posts"}
         </h2>
-        
+
         <div className={styles.grid}>
           {blogPosts.map((post) => (
             <article key={post.id} className={styles.card}>
@@ -97,12 +97,14 @@ const BlogPostList: FC<BlogPostListProps> = ({ slice }) => {
                   />
                 </div>
               )}
-              
+
               <div className={styles.content}>
                 <div className={styles.meta}>
                   {(post.data as any).publication_date && (
                     <time dateTime={(post.data as any).publication_date}>
-                      {new Date((post.data as any).publication_date).toLocaleDateString()}
+                      {new Date(
+                        (post.data as any).publication_date,
+                      ).toLocaleDateString()}
                     </time>
                   )}
                   {(post.data as any).author && (

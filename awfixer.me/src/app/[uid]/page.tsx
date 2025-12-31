@@ -40,10 +40,16 @@ export async function generateMetadata({
 export async function generateStaticParams() {
   const client = createClient();
 
-  // Get all pages from Prismic, except the homepage.
-  const pages = await client.getAllByType("page", {
-    filters: [filter.not("my.page.uid", "home")],
-  });
+  try {
+    // Get all pages from Prismic, except the homepage.
+    const pages = await client.getAllByType("page", {
+      filters: [filter.not("my.page.uid", "home")],
+    });
 
-  return pages.map((page) => ({ uid: page.uid }));
+    return pages.map((page) => ({ uid: page.uid }));
+  } catch (error) {
+    // If there's an error (e.g., page type doesn't exist), return empty array
+    console.error("Error generating static params for pages:", error);
+    return [];
+  }
 }

@@ -18,7 +18,7 @@ const Footer: FC<FooterProps> = ({ slice }) => {
       LinkedIn: "💼",
       GitHub: "🐙",
       Instagram: "📷",
-      Facebook: "📘"
+      Facebook: "📘",
     };
     return iconMap[platform] || "🔗";
   };
@@ -32,13 +32,18 @@ const Footer: FC<FooterProps> = ({ slice }) => {
             <div className={styles.section}>
               <h3 className={styles.sectionTitle}>Navigation</h3>
               <ul className={styles.linkList}>
-                {slice.primary.navigation_links.map((item: any, index: number) => (
-                  <li key={index}>
-                    <PrismicNextLink field={item.link} className={styles.link}>
-                      {item.label}
-                    </PrismicNextLink>
-                  </li>
-                ))}
+                {slice.primary.navigation_links.map(
+                  (item: any, index: number) => (
+                    <li key={index}>
+                      <PrismicNextLink
+                        field={item.link}
+                        className={styles.link}
+                      >
+                        {item.label}
+                      </PrismicNextLink>
+                    </li>
+                  ),
+                )}
               </ul>
             </div>
           )}

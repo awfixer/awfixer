@@ -1,124 +1,124 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"navigation_links": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"key": "dfe0fcc4-15e5-410c-b253-39eac7bb6627",
-						"value": [
-							[
-								"label",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "Privacy Policy",
-									"type": "Text"
-								}
-							],
-							[
-								"link",
-								{
-									"__TYPE__": "LinkContent",
-									"key": "fcabb713-9b89-41f5-a5fd-d95a215c0546",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "/privacy"
-									}
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"key": "e1f2g3h4-25f6-511d-c364-40fbd8cc7738",
-						"value": [
-							[
-								"label",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "Terms of Service",
-									"type": "Text"
-								}
-							],
-							[
-								"link",
-								{
-									"__TYPE__": "LinkContent",
-									"key": "g2h3i4j5-36g7-622e-d475-51gce9dd8849",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "/terms"
-									}
-								}
-							]
-						]
-					}
-				]
-			},
-			"social_links": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"key": "5e83d635-b019-44b7-9dfe-97f0c657f7c3",
-						"value": [
-							[
-								"platform",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "Twitter",
-									"type": "Select"
-								}
-							],
-							[
-								"url",
-								{
-									"__TYPE__": "LinkContent",
-									"key": "1103a64d-10c7-4be1-bbe4-5e962f21c7db",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://twitter.com/awfixer"
-									}
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"key": "h3i4j5k6-071a-733f-e586-62hdf0ee995a",
-						"value": [
-							[
-								"platform",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "GitHub",
-									"type": "Select"
-								}
-							],
-							[
-								"url",
-								{
-									"__TYPE__": "LinkContent",
-									"key": "i4j5k6l7-182b-844g-f697-73ieg1ffaa6b",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://github.com/awfixer"
-									}
-								}
-							]
-						]
-					}
-				]
-			},
-			"copyright_text": {
-				"__TYPE__": "FieldContent",
-				"value": "© 2024 AWFixer. All rights reserved.",
-				"type": "Text"
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "navigation_links": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "dfe0fcc4-15e5-410c-b253-39eac7bb6627",
+            "value": [
+              [
+                "label",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Privacy Policy",
+                  "type": "Text"
+                }
+              ],
+              [
+                "link",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "fcabb713-9b89-41f5-a5fd-d95a215c0546",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "/privacy"
+                  }
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "e1f2g3h4-25f6-511d-c364-40fbd8cc7738",
+            "value": [
+              [
+                "label",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Terms of Service",
+                  "type": "Text"
+                }
+              ],
+              [
+                "link",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "g2h3i4j5-36g7-622e-d475-51gce9dd8849",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "/terms"
+                  }
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "social_links": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "5e83d635-b019-44b7-9dfe-97f0c657f7c3",
+            "value": [
+              [
+                "platform",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "Twitter",
+                  "type": "Select"
+                }
+              ],
+              [
+                "url",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "1103a64d-10c7-4be1-bbe4-5e962f21c7db",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "https://twitter.com/awfixer"
+                  }
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "key": "h3i4j5k6-071a-733f-e586-62hdf0ee995a",
+            "value": [
+              [
+                "platform",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "GitHub",
+                  "type": "Select"
+                }
+              ],
+              [
+                "url",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "i4j5k6l7-182b-844g-f697-73ieg1ffaa6b",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "https://github.com/awfixer"
+                  }
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "copyright_text": {
+        "__TYPE__": "FieldContent",
+        "value": "© 2024 AWFixer. All rights reserved.",
+        "type": "Text"
+      }
+    },
+    "items": []
+  }
 ]

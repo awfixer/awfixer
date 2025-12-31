@@ -4,15 +4,15 @@
     "prismic": {
       "type": "local",
       "command": ["bun", "x", "@prismicio/mcp-server@latest"],
-      "enabled": true
-    }
+      "enabled": true,
+    },
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
       "enabled": true,
       "headers": {
-         "CONTEXT7_API_KEY": "$CONTEXT7_API_KEY"
-       }
-    }
-  }
+        "CONTEXT7_API_KEY": "$CONTEXT7_API_KEY",
+      },
+    },
+  },
 }

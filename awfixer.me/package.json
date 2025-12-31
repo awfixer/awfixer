@@ -2,24 +2,35 @@
   "name": "nextjs-starter-prismic-minimal",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.25.0",
   "license": "Apache-2.0",
   "author": "Prismic <contact@prismic.io> (https://prismic.io)",
   "scripts": {
-    "dev": "concurrently \"pnpm:next:dev\" \"pnpm:slicemachine\" --names \"next,slicemachine\" --prefix-colors blue,magenta",
+    "dev": "concurrently \"pnpm next:dev\" \"pnpm slicemachine\" --names \"next,slicemachine\" --prefix-colors blue,magenta",
     "next:dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
     "slicemachine": "start-slicemachine",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.1",
+    "@ai-sdk/google": "^3.0.1",
+    "@ai-sdk/openai": "^3.0.1",
+    "@ai-sdk/react": "^3.0.3",
+    "@opencode-ai/plugin": "^1.0.209",
     "@prismicio/client": "^7.21.1",
     "@prismicio/next": "^2.0.2",
     "@prismicio/react": "^3.2.2",
+    "@vercel/analytics": "^1.6.1",
+    "ai": "^6.0.3",
     "next": "16.0.10",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "zod": "^4.2.1"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.92",
@@ -29,6 +40,7 @@
     "concurrently": "9.2.1",
     "eslint": "9.39.1",
     "eslint-config-next": "16.0.8",
+    "prettier": "^3.7.4",
     "slice-machine-ui": "^2.20.5",
     "typescript": "5.9.3"
   }

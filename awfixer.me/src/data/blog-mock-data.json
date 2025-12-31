@@ -147,10 +147,8 @@
           "spans": []
         }
       ]
-    }
-  }
-      ],
-      "excerpt": [
+    },
+    "excerpt": [
         {
           "type": "paragraph",
           "text": "Learn how to build modern web applications with Next.js 16, including server components, app router, and the latest features.",

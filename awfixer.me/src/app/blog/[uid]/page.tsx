@@ -10,7 +10,7 @@ type Params = { uid: string };
 
 export default async function BlogPostPage({ params }: { params: Params }) {
   const client = createClient();
-  
+
   try {
     const post = await client.getByUID("blog_post" as any, params.uid);
 
@@ -21,18 +21,17 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             <h1 className="text-4xl font-bold mb-4">
               {asText((post.data as any).title)}
             </h1>
-            
+
             <div className="flex items-center gap-4 text-gray-600 mb-6">
               {(post.data as any).publication_date && (
                 <time dateTime={(post.data as any).publication_date}>
-                  {new Date((post.data as any).publication_date).toLocaleDateString(
-                    "en-US",
-                    {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    }
-                  )}
+                  {new Date(
+                    (post.data as any).publication_date,
+                  ).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
                 </time>
               )}
               {(post.data as any).author && (
@@ -60,7 +59,10 @@ export default async function BlogPostPage({ params }: { params: Params }) {
               <div className="mb-8">
                 <img
                   src={(post.data as any).featured_image.url}
-                  alt={(post.data as any).featured_image.alt || asText((post.data as any).title)}
+                  alt={
+                    (post.data as any).featured_image.alt ||
+                    asText((post.data as any).title)
+                  }
                   className="w-full h-auto rounded-lg"
                 />
               </div>
@@ -89,23 +91,46 @@ export default async function BlogPostPage({ params }: { params: Params }) {
   }
 }
 
-export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+export async function generateStaticParams() {
   const client = createClient();
-  
+
+  try {
+    // Get all blog posts
+    const posts = await client.getAllByType("blog_post" as any);
+
+    return posts.map((post) => ({ uid: post.uid }));
+  } catch (error) {
+    // Return empty array if blog_post type doesn't exist yet
+    return [];
+  }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
+  const client = createClient();
+
   try {
     const post = await client.getByUID("blog_post" as any, params.uid);
 
     return {
       title: asText((post.data as any).title) + " | AWFixer",
-      description: (post.data as any).meta_description || asText((post.data as any).excerpt),
+      description:
+        (post.data as any).meta_description ||
+        asText((post.data as any).excerpt),
       openGraph: {
-        title: (post.data as any).meta_title || asText((post.data as any).title),
-        description: (post.data as any).meta_description || asText((post.data as any).excerpt),
-        images: (post.data as any).meta_image?.url ? [
-          { url: (post.data as any).meta_image.url }
-        ] : (post.data as any).featured_image?.url ? [
-          { url: (post.data as any).featured_image.url }
-        ] : [],
+        title:
+          (post.data as any).meta_title || asText((post.data as any).title),
+        description:
+          (post.data as any).meta_description ||
+          asText((post.data as any).excerpt),
+        images: (post.data as any).meta_image?.url
+          ? [{ url: (post.data as any).meta_image.url }]
+          : (post.data as any).featured_image?.url
+            ? [{ url: (post.data as any).featured_image.url }]
+            : [],
       },
     };
   } catch (error) {
@@ -114,4 +139,3 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     };
   }
 }
-

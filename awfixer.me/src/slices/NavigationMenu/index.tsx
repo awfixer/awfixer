@@ -36,12 +36,14 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ slice }) => {
             <span className={styles.hamburgerLine}></span>
           </button>
         </div>
-        
-        <ul className={`${styles.navList} ${isMobileMenuOpen ? styles.navListOpen : ''}`}>
+
+        <ul
+          className={`${styles.navList} ${isMobileMenuOpen ? styles.navListOpen : ""}`}
+        >
           {slice.primary.menu_items.map((item, index) => (
             <li key={index} className={styles.navItem}>
-              <PrismicNextLink 
-                field={item.link} 
+              <PrismicNextLink
+                field={item.link}
                 className={styles.navLink}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
