@@ -1,3 +1,5 @@
+"use client";
+
 import { type FC, useState } from "react";
 import { type Content } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";

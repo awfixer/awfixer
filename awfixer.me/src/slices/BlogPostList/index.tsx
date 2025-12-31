@@ -1,3 +1,5 @@
+"use client";
+
 import React, { type FC } from "react";
 import { asText } from "@prismicio/client";
 import { type SliceComponentProps } from "@prismicio/react";
