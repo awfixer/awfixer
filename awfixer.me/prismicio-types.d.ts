@@ -28,8 +28,8 @@ type PickContentRelationshipFieldData<
       TSubRelationship["customtypes"],
       TLang
     >;
-  } & {
-    // Group
+  } & // Group
+  {
     [TGroup in Extract<
       TRelationship["fields"][number],
       | prismic.CustomTypeModelFetchGroupLevel1
@@ -41,8 +41,8 @@ type PickContentRelationshipFieldData<
           PickContentRelationshipFieldData<TGroup, TGroupData, TLang>
         >
       : never;
-  } & {
-    // Other fields
+  } & // Other fields
+  {
     [TFieldKey in Extract<
       TRelationship["fields"][number],
       string
@@ -69,7 +69,81 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type PageDocumentDataSlicesSlice = RichTextSlice;
+type BlogDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Blog documents
+ */
+interface BlogDocumentData {
+  /**
+   * Slice Zone field in *Blog*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<BlogDocumentDataSlicesSlice>; /**
+   * Meta Title field in *Blog*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: blog.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Blog*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: blog.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Blog*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Blog document from Prismic
+ *
+ * - **API ID**: `blog`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BlogDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<BlogDocumentData>, "blog", Lang>;
+
+/**
+ * Item in *Blog Post → Tags*
+ */
+export interface BlogPostDocumentDataTagsItem {
+  /**
+   * Tag field in *Blog Post → Tags*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Tag name
+   * - **API ID Path**: blog_post.tags[].tag
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  tag: prismic.KeyTextField;
+}
 
 /**
  * Content for Blog Post documents
@@ -117,9 +191,7 @@ interface BlogPostDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
-  content: prismic.RichTextField;
-
-  /**
+  content: prismic.RichTextField; /**
    * Publication Date field in *Blog Post*
    *
    * - **Field Type**: Date
@@ -142,7 +214,7 @@ interface BlogPostDocumentData {
   author: prismic.KeyTextField;
 
   /**
-   * Reading Time field in *Blog Post*
+   * Reading Time (minutes) field in *Blog Post*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -161,19 +233,7 @@ interface BlogPostDocumentData {
    * - **Tab**: Metadata
    * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
    */
-  tags: prismic.GroupField<{
-    /**
-     * Tag field in *Blog Post → Tags*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: Tag name
-     * - **API ID Path**: blog_post.tags[].tag
-     * - **Documentation**: https://prismic.io/docs/fields/text
-     */
-    tag: prismic.KeyTextField;
-  }>;
-
-  /**
+  tags: prismic.GroupField<Simplify<BlogPostDocumentDataTagsItem>>; /**
    * Meta Title field in *Blog Post*
    *
    * - **Field Type**: Text
@@ -217,7 +277,17 @@ interface BlogPostDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type BlogPostDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<BlogPostDocumentData, "blog_post", Lang>;
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<BlogPostDocumentData>,
+    "blog_post",
+    Lang
+  >;
+
+type PageDocumentDataSlicesSlice =
+  | RichTextSlice
+  | NavigationMenuSlice
+  | FooterSlice
+  | BlogPostListSlice;
 
 /**
  * Content for Page documents
@@ -243,7 +313,7 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>; /**
    * Meta Title field in *Page*
    *
    * - **Field Type**: Text
@@ -251,7 +321,7 @@ interface PageDocumentData {
    * - **API ID Path**: page.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
-   */;
+   */
   meta_title: prismic.KeyTextField;
 
   /**
@@ -289,7 +359,190 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = PageDocument | BlogPostDocument;
+export type AllDocumentTypes = BlogDocument | BlogPostDocument | PageDocument;
+
+/**
+ * Primary content in *BlogPostList → Default → Primary*
+ */
+export interface BlogPostListSliceDefaultPrimary {
+  /**
+   * Section Title field in *BlogPostList → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Recent Blog Posts
+   * - **API ID Path**: blog_post_list.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Number of posts to show field in *BlogPostList → Default → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: 3
+   * - **API ID Path**: blog_post_list.default.primary.limit
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  limit: prismic.NumberField;
+
+  /**
+   * Show excerpt field in *BlogPostList → Default → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post_list.default.primary.show_excerpt
+   * - **Documentation**: https://prismic.io/docs/fields/boolean
+   */
+  show_excerpt: prismic.BooleanField;
+}
+
+/**
+ * Default variation for BlogPostList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default blog post list
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BlogPostListSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BlogPostListSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *BlogPostList*
+ */
+type BlogPostListSliceVariation = BlogPostListSliceDefault;
+
+/**
+ * BlogPostList Shared Slice
+ *
+ * - **API ID**: `blog_post_list`
+ * - **Description**: Display a list of recent blog posts
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BlogPostListSlice = prismic.SharedSlice<
+  "blog_post_list",
+  BlogPostListSliceVariation
+>;
+
+/**
+ * Item in *Footer → Default → Primary → Navigation Links*
+ */
+export interface FooterSliceDefaultPrimaryNavigationLinksItem {
+  /**
+   * Label field in *Footer → Default → Primary → Navigation Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Link text
+   * - **API ID Path**: footer.default.primary.navigation_links[].label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Link field in *Footer → Default → Primary → Navigation Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.navigation_links[].link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Item in *Footer → Default → Primary → Social Media Links*
+ */
+export interface FooterSliceDefaultPrimarySocialLinksItem {
+  /**
+   * Platform field in *Footer → Default → Primary → Social Media Links*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.social_links[].platform
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  platform: prismic.SelectField<
+    "Twitter" | "LinkedIn" | "GitHub" | "Instagram" | "Facebook"
+  >;
+
+  /**
+   * URL field in *Footer → Default → Primary → Social Media Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.social_links[].url
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Primary content in *Footer → Default → Primary*
+ */
+export interface FooterSliceDefaultPrimary {
+  /**
+   * Navigation Links field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.navigation_links[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  navigation_links: prismic.GroupField<
+    Simplify<FooterSliceDefaultPrimaryNavigationLinksItem>
+  >;
+
+  /**
+   * Social Media Links field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.social_links[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  social_links: prismic.GroupField<
+    Simplify<FooterSliceDefaultPrimarySocialLinksItem>
+  >;
+
+  /**
+   * Copyright Text field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: © 2024 Your Company
+   * - **API ID Path**: footer.default.primary.copyright_text
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  copyright_text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Footer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default footer
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FooterSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FooterSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Footer*
+ */
+type FooterSliceVariation = FooterSliceDefault;
+
+/**
+ * Footer Shared Slice
+ *
+ * - **API ID**: `footer`
+ * - **Description**: Footer with navigation links, social media links, and copyright information
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FooterSlice = prismic.SharedSlice<"footer", FooterSliceVariation>;
 
 /**
  * Item in *NavigationMenu → Default → Primary → Menu Items*
@@ -429,12 +682,26 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      BlogDocument,
+      BlogDocumentData,
+      BlogDocumentDataSlicesSlice,
+      BlogPostDocument,
+      BlogPostDocumentData,
+      BlogPostDocumentDataTagsItem,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
-      BlogPostDocument,
-      BlogPostDocumentData,
       AllDocumentTypes,
+      BlogPostListSlice,
+      BlogPostListSliceDefaultPrimary,
+      BlogPostListSliceVariation,
+      BlogPostListSliceDefault,
+      FooterSlice,
+      FooterSliceDefaultPrimaryNavigationLinksItem,
+      FooterSliceDefaultPrimarySocialLinksItem,
+      FooterSliceDefaultPrimary,
+      FooterSliceVariation,
+      FooterSliceDefault,
       NavigationMenuSlice,
       NavigationMenuSliceDefaultPrimaryMenuItemsItem,
       NavigationMenuSliceDefaultPrimary,
