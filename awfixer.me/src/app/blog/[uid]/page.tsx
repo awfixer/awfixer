@@ -4,15 +4,14 @@ import { notFound } from "next/navigation";
 import { asText } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
 
-import { createClient } from "@/prismicio";
+import { createClient, createClientWithBlogRoutes } from "@/prismicio";
 
 type Params = { uid: string };
 
 export default async function BlogPostPage({ params }: { params: Params }) {
-  const client = createClient();
-
   try {
-    const post = await client.getByUID("blog_post" as any, params.uid);
+    const blogClient = createClientWithBlogRoutes();
+    const post = await blogClient.getByUID("blog_post", params.uid);
 
     return (
       <main className="container mx-auto px-4 py-8 max-w-4xl">
@@ -96,7 +95,8 @@ export async function generateStaticParams() {
 
   try {
     // Get all blog posts
-    const posts = await client.getAllByType("blog_post" as any);
+    const blogClient = createClientWithBlogRoutes();
+    const posts = await blogClient.getAllByType("blog_post");
 
     return posts.map((post) => ({ uid: post.uid }));
   } catch (error) {
@@ -113,7 +113,8 @@ export async function generateMetadata({
   const client = createClient();
 
   try {
-    const post = await client.getByUID("blog_post" as any, params.uid);
+    const blogClient = createClientWithBlogRoutes();
+    const post = await blogClient.getByUID("blog_post", params.uid);
 
     return {
       title: asText((post.data as any).title) + " | AWFixer",

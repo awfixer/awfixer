@@ -18,7 +18,7 @@ export const repositoryName =
 const routes: Route[] = [
   { type: "page", uid: "home", path: "/" },
   { type: "page", path: "/:uid" },
-  { type: "blog_post", path: "/blog/:uid" },
+  // Blog post routes will be added dynamically if the type exists
 ];
 
 /**
@@ -30,6 +30,30 @@ const routes: Route[] = [
 export function createClient(config: ClientConfig = {}) {
   const client = baseCreateClient(sm.apiEndpoint || repositoryName, {
     routes,
+    fetchOptions:
+      process.env.NODE_ENV === "production"
+        ? { next: { tags: ["prismic"] }, cache: "force-cache" }
+        : { next: { revalidate: 5 } },
+    ...config,
+  });
+
+  enableAutoPreviews({ client });
+
+  return client;
+}
+
+/**
+ * Creates a Prismic client with blog post routes included. Use this only when
+ * you're sure the blog_post type exists in the repository.
+ */
+export function createClientWithBlogRoutes(config: ClientConfig = {}) {
+  const blogRoutes: Route[] = [
+    ...routes,
+    { type: "blog_post", path: "/blog/:uid" },
+  ];
+
+  const client = baseCreateClient(sm.apiEndpoint || repositoryName, {
+    routes: blogRoutes,
     fetchOptions:
       process.env.NODE_ENV === "production"
         ? { next: { tags: ["prismic"] }, cache: "force-cache" }

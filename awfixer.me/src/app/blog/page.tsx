@@ -2,7 +2,7 @@ import { type Metadata } from "next";
 
 import { asText } from "@prismicio/client";
 
-import { createClient } from "@/prismicio";
+import { createClient, createClientWithBlogRoutes } from "@/prismicio";
 
 export default async function BlogPage() {
   const client = createClient();
@@ -10,7 +10,9 @@ export default async function BlogPage() {
   // Get all blog posts, sorted by publication date
   let blogPosts: any[] = [];
   try {
-    blogPosts = await client.getAllByType("blog_post" as any, {
+    // Try with blog routes first
+    const blogClient = createClientWithBlogRoutes();
+    blogPosts = await blogClient.getAllByType("blog_post", {
       orderings: [
         { field: "my.blog_post.publication_date", direction: "desc" },
       ],

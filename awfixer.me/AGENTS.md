@@ -149,6 +149,7 @@ This is a Next.js 16 application with Prismic CMS integration using Slice Machin
 This is a detailed summary of Prismic documentation for integrating with **Next.js** (as of December 2025), based on main hub page at https://prismic.io/docs/nextjs. It serves as comprehensive reference notes for an agent's knowledge file.
 
 Prismic offers first-party integration with Next.js, supporting key features like:
+
 - Building pages with **slices** and page types.
 - Live previews in Page Builder.
 - Full-website draft previews.
@@ -165,11 +166,11 @@ The docs recommend using **App Router** with TypeScript.
    In Prismic dashboard, create a new repository and select "Connect your own web app".
 
 2. **Integrate Prismic into Next.js**  
-   Use `@slicemachine/init` (guided from repository dashboard):  
-   - Installs Slice Machine, `@prismicio/react`, `@prismicio/client`.  
-   - Sets up preview/exit-preview endpoints (`/api/preview`, `/api/exit-preview`).  
-   - Sets up revalidation endpoint (`/api/revalidate`).  
-   - Creates slice simulator page (`/slice-simulator`).  
+   Use `@slicemachine/init` (guided from repository dashboard):
+   - Installs Slice Machine, `@prismicio/react`, `@prismicio/client`.
+   - Sets up preview/exit-preview endpoints (`/api/preview`, `/api/exit-preview`).
+   - Sets up revalidation endpoint (`/api/revalidate`).
+   - Creates slice simulator page (`/slice-simulator`).
    - Generates `prismicio.ts` client and `slicemachine.config.json`.
 
 3. **Model Content**  
@@ -187,7 +188,9 @@ The docs recommend using **App Router** with TypeScript.
 ## Key Concepts
 
 ### Routes and Route Resolvers
-Define routes in `prismicio.ts` to resolve internal links:  
+
+Define routes in `prismicio.ts` to resolve internal links:
+
 ```typescript
 const routes: Route[] = [
   { type: "homepage", path: "/" },
@@ -195,14 +198,18 @@ const routes: Route[] = [
   { type: "blog_post", path: "/blog/:uid" },
 ];
 ```
+
 Matches Next.js file-system routing (App: `app/[uid]/page.tsx`; Pages: `pages/[uid].tsx`).
 
 ### Slices
-Reusable page sections modeled in Slice Machine.  
-- Generates React components in `src/slices/`.  
+
+Reusable page sections modeled in Slice Machine.
+
+- Generates React components in `src/slices/`.
 - Render with `<SliceZone slices={page.data.slices} components={components} />`.
 
 Example Slice Component:
+
 ```tsx
 export default function CallToAction({ slice }) {
   return (
@@ -217,13 +224,15 @@ export default function CallToAction({ slice }) {
 ### Prismic Client Setup (`prismicio.ts`)
 
 **App Router** (recommended):
+
 ```typescript
 export function createClient(config = {}) {
   const client = baseCreateClient(repositoryName, {
     routes,
-    fetchOptions: process.env.NODE_ENV === "production"
-      ? { next: { tags: ["prismic"] }, cache: "force-cache" }
-      : { next: { revalidate: 5 } },
+    fetchOptions:
+      process.env.NODE_ENV === "production"
+        ? { next: { tags: ["prismic"] }, cache: "force-cache" }
+        : { next: { revalidate: 5 } },
     ...config,
   });
   enableAutoPreviews({ client });
@@ -237,6 +246,7 @@ Passes `previewData` and `req` for previews.
 ### Fetching Content
 
 **App Router** (Server Components):
+
 ```tsx
 export default async function Page({ params }) {
   const client = createClient();
@@ -251,21 +261,25 @@ Similar, but props passed to component.
 Avoid fetching in slices with Pages Router; use context or relationships.
 
 ### Displaying Content (`@prismicio/react` & `@prismicio/next`)
+
 - `<PrismicRichText field={...} />` — Rich text.
 - `<PrismicText field={...} />` — Key text/title.
 - `<PrismicNextLink field={...} />` — Internal/external links.
 - `<PrismicNextImage field={...} />` — Optimized images.
 
 ### Security
+
 Set API to "Private" and use access token via `PRISMIC_ACCESS_TOKEN` env var.
 
 ## Previews
 
 ### Live Previews (Slice Simulator)
+
 - Page at `/slice-simulator`.
 - Configure simulator URL in Prismic Page Builder.
 
 ### Draft Previews
+
 - App Router: Wrap root layout with `<PrismicPreview>`, use Draft Mode.
 - Pages Router: Wrap `_app.tsx` with `<PrismicPreview>`, use Preview Mode.
 - Endpoints: `/api/preview` (enter), `/api/exit-preview` (exit).
@@ -274,13 +288,16 @@ Set API to "Private" and use access token via `PRISMIC_ACCESS_TOKEN` env var.
 ## Deployment & Content Updates
 
 **App Router**:
+
 - `/api/revalidate` handler revalidates `prismic` tag.
 - Add Prismic webhook to trigger on publish/unpublish.
 
 **Pages Router**:
+
 - Webhook triggers full rebuild.
 
 ## SEO
+
 Add meta fields (title, description, image) to custom types.  
 Generate metadata in pages (App: `generateMetadata`; Pages: `<Head>`).
 
@@ -293,6 +310,7 @@ Generate metadata in pages (App: `generateMetadata`; Pages: `<Head>`).
 - Query with `lang` param; use `lang: "*"` for all locales in static generation.
 
 ## Additional Resources in Docs
+
 - Content Modeling: https://prismic.io/docs/technologies/model-content-nextjs
 - Slices: Various guides on creating/displaying.
 - Technical References: `@prismicio/next`, `@prismicio/react`, `@prismicio/client`.
