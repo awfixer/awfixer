@@ -29,6 +29,12 @@
           "choices": {
             "rich_text": {
               "type": "SharedSlice"
+            },
+            "navigation_menu": {
+              "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
             }
           }
         }

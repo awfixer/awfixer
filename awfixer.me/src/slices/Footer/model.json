@@ -1,0 +1,71 @@
+{
+  "id": "footer",
+  "type": "SharedSlice",
+  "name": "Footer",
+  "description": "Footer with navigation links, social media links, and copyright information",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "initial",
+      "description": "Default footer",
+      "imageUrl": "",
+      "primary": {
+        "navigation_links": {
+          "type": "Group",
+          "config": {
+            "label": "Navigation Links",
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": "Link text"
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "allowText": false,
+                  "select": "web"
+                }
+              }
+            }
+          }
+        },
+        "social_links": {
+          "type": "Group",
+          "config": {
+            "label": "Social Media Links",
+            "fields": {
+              "platform": {
+                "type": "Select",
+                "config": {
+                  "label": "Platform",
+                  "options": ["Twitter", "LinkedIn", "GitHub", "Instagram", "Facebook"]
+                }
+              },
+              "url": {
+                "type": "Link",
+                "config": {
+                  "label": "URL",
+                  "allowText": false,
+                  "select": "web"
+                }
+              }
+            }
+          }
+        },
+        "copyright_text": {
+          "type": "Text",
+          "config": {
+            "label": "Copyright Text",
+            "placeholder": "© 2024 Your Company"
+          }
+        }
+      }
+    }
+  ]
+}

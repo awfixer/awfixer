@@ -8,8 +8,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
-      <PrismicPreview repositoryName={repositoryName} />
+      <body className="min-h-screen flex flex-col">
+        {children}
+        <PrismicPreview repositoryName={repositoryName} />
+      </body>
     </html>
   );
 }

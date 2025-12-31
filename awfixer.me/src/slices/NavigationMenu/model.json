@@ -1,0 +1,41 @@
+{
+  "id": "navigation_menu",
+  "type": "SharedSlice",
+  "name": "NavigationMenu",
+  "description": "Navigation menu with responsive design for desktop and mobile",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "initial",
+      "description": "Default navigation menu",
+      "imageUrl": "",
+      "primary": {
+        "menu_items": {
+          "type": "Group",
+          "config": {
+            "label": "Menu Items",
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": "Menu item text"
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "allowText": false,
+                  "select": "web"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
