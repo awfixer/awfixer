@@ -80,7 +80,7 @@
 									"key": "1103a64d-10c7-4be1-bbe4-5e962f21c7db",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "https://twitter.com/yourcompany"
+										"url": "https://twitter.com/awfixer"
 									}
 								}
 							]
@@ -105,7 +105,7 @@
 									"key": "i4j5k6l7-182b-844g-f697-73ieg1ffaa6b",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "https://github.com/yourcompany"
+										"url": "https://github.com/awfixer"
 									}
 								}
 							]
@@ -115,7 +115,7 @@
 			},
 			"copyright_text": {
 				"__TYPE__": "FieldContent",
-				"value": "© 2024 Your Company. All rights reserved.",
+				"value": "© 2024 AWFixer. All rights reserved.",
 				"type": "Text"
 			}
 		},

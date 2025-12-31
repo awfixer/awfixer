@@ -35,6 +35,9 @@
             },
             "footer": {
               "type": "SharedSlice"
+            },
+            "blog_post_list": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -1,0 +1,112 @@
+{
+  "id": "blog_post",
+  "label": "Blog Post",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "Blog post title",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
+      "excerpt": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Excerpt",
+          "placeholder": "Brief summary of the blog post",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em"
+        }
+      },
+      "featured_image": {
+        "type": "Image",
+        "config": {
+          "label": "Featured Image",
+          "constraint": {
+            "width": 1200,
+            "height": 630
+          },
+          "thumbnails": []
+        }
+      },
+      "content": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Content",
+          "placeholder": "Full blog post content",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item"
+        }
+      }
+    },
+    "Metadata": {
+      "publication_date": {
+        "type": "Date",
+        "config": {
+          "label": "Publication Date"
+        }
+      },
+      "author": {
+        "type": "Text",
+        "config": {
+          "label": "Author",
+          "placeholder": "Author name"
+        }
+      },
+      "reading_time": {
+        "type": "Number",
+        "config": {
+          "label": "Reading Time (minutes)"
+        }
+      },
+      "tags": {
+        "type": "Group",
+        "config": {
+          "label": "Tags",
+          "fields": {
+            "tag": {
+              "type": "Text",
+              "config": {
+                "label": "Tag",
+                "placeholder": "Tag name"
+              }
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "SEO title for search engines"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "SEO description for search engines"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {
+            "width": 2400,
+            "height": 1260
+          },
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

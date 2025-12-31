@@ -37,7 +37,7 @@
 								"label",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "About",
+									"value": "Blog",
 									"type": "Text"
 								}
 							],
@@ -45,10 +45,10 @@
 								"link",
 								{
 									"__TYPE__": "LinkContent",
-									"key": "b85642e6-0774-5687-bd47-gcf66110gdf9",
+									"key": "e96753f7-2785-7798-de58-kdg88222ifg1",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "/about"
+										"url": "/blog"
 									}
 								}
 							]
@@ -61,7 +61,7 @@
 								"label",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "Services",
+									"value": "About",
 									"type": "Text"
 								}
 							],
@@ -69,10 +69,10 @@
 								"link",
 								{
 									"__TYPE__": "LinkContent",
-									"key": "c96753f7-1785-6798-ce58-hdg77221heg0",
+									"key": "b85642e6-0774-5687-bd47-gcf66110gdf9",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "/services"
+										"url": "/about"
 									}
 								}
 							]

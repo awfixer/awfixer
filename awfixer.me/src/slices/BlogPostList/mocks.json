@@ -1,0 +1,24 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "Latest Posts",
+				"type": "Text"
+			},
+			"limit": {
+				"__TYPE__": "FieldContent",
+				"value": 3,
+				"type": "Number"
+			},
+			"show_excerpt": {
+				"__TYPE__": "FieldContent",
+				"value": true,
+				"type": "Boolean"
+			}
+		},
+		"items": []
+	}
+]

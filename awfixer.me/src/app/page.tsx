@@ -36,8 +36,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const home = await client.getByUID("page", "home");
 
   return {
-    title: asText(home.data.title),
-    description: home.data.meta_description,
+    title: asText(home.data.title) + " | AWFixer",
+    description: home.data.meta_description || "AWFixer - Personal website and blog",
     openGraph: {
       title: home.data.meta_title ?? undefined,
       images: [{ url: home.data.meta_image.url ?? "" }],
