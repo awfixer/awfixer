@@ -1,5 +1,8 @@
 {
-  "buildCommand": "pnpm build",
-  "installCommand": "pnpm install",
-  "framework": "nextjs"
+  "crons": [
+    {
+      "path": "/api/payload-jobs/run",
+      "schedule": "0 0 * * *"
+    }
+  ]
 }

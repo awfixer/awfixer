@@ -1,333 +1,1141 @@
-# AGENTS.md
+# Payload CMS Development Rules
 
-This file contains guidelines and commands for agentic coding agents working in this Next.js + Prismic repository.
+You are an expert Payload CMS developer. When working with Payload projects, follow these rules:
 
-## Build, Lint, and Test Commands
+## Core Principles
 
-### Package Manager Enforcement
+1. **TypeScript-First**: Always use TypeScript with proper types from Payload
+2. **Security-Critical**: Follow all security patterns, especially access control
+3. **Type Generation**: Run `generate:types` script after schema changes
+4. **Transaction Safety**: Always pass `req` to nested operations in hooks
+5. **Access Control**: Understand Local API bypasses access control by default
+6. **Access Control**: Ensure roles exist when modifiyng collection or globals with access controls
 
-- This project strictly enforces pnpm usage via `packageManager` field in package.json and preinstall hook
-- npm and yarn are explicitly blocked to ensure consistent dependency management
+### Code Validation
 
-### Development
-
-- `pnpm next:dev` - Start only Next.js development server (use when dev server is not running)
-- `pnpm slicemachine` - Start only Slice Machine UI (use when Slice Machine is not running)
-- NOTE: Never run `pnpm dev`, `pnpm build`, or `pnpm start` as these are always running in the background to monitor work
-
-### Production
-
-- Build and start processes are managed automatically in the background
-
-### Code Quality
-
-- `pnpm lint` - Run ESLint on the entire codebase
-- `pnpm format` - Format code with Prettier
-
-### Testing
-
-This project does not currently have test scripts configured. If adding tests, update package.json with appropriate test commands.
+- To validate typescript correctness after modifying code run `tsc --noEmit`
+- Generate import maps after creating or modifying components.
 
 ## Project Structure
 
-This is a Next.js 16 application with Prismic CMS integration using Slice Machine for component-based content management.
-
-### Key Directories
-
-- `src/app/` - Next.js App Router pages and layouts
-- `src/slices/` - Prismic slice components
-- `customtypes/` - Prismic custom type definitions
-- `slicemachine.config.json` - Slice Machine configuration
-
-## Code Style Guidelines
-
-### Import Organization
-
-- Group imports in this order: React/Next.js, Prismic libraries, local components, types, utilities
-- Use named imports for Prismic components: `import { PrismicRichText, SliceZone } from "@prismicio/react"`
-- Use absolute imports with `@/` alias for local files: `import { createClient } from "@/prismicio"`
-
-### TypeScript
-
-- Use strict TypeScript configuration (already enabled)
-- Type all props and function parameters
-- Use `FC` type for functional components: `const Component: FC<Props> = ({ prop }) => {}`
-- Use Prismic generated types: `type Content = prismic.AllDocumentTypes`
-- Use `SliceComponentProps` for slice components: `type SliceProps = SliceComponentProps<Content.RichTextSlice>`
-
-### Component Structure
-
-- Use functional components with React 19+ patterns
-- Slice components should follow the pattern: export default, use slice prop, render within semantic section
-- Include JSDoc comments for slice components describing their purpose
-- Use CSS Modules for styling: `import styles from "./index.module.css"`
-
-### Prismic-Specific Patterns
-
-- **Always use MCP tools for Prismic tasks** before implementing manually
-- Use `createClient()` from `@/prismicio` for all API calls
-- Use `asText()` for extracting text content from Rich Text fields
-- Use `SliceZone` with dynamic components for rendering slices
-- Configure `JSXMapSerializer` for custom Rich Text rendering
-- Use `PrismicNextLink` for internal links with Prismic field data
-
-### Error Handling
-
-- Use async/await for Prismic client calls
-- Handle missing data gracefully with optional chaining and nullish coalescing
-- Use proper TypeScript types to prevent runtime errors
-
-### Naming Conventions
-
-- Components: PascalCase (e.g., `RichText`, `HomePage`)
-- Files: kebab-case for directories, PascalCase for component files
-- Slice names: PascalCase matching Prismic slice names
-- CSS Classes: kebab-case in CSS Modules, use camelCase in component access
-
-### Styling
-
-- Use CSS Modules for component-scoped styles
-- Follow BEM-like naming: `.component-name`, `.component-name__element`
-- Avoid inline styles except for dynamic values
-
-### Slice Machine Integration
-
-- Never manually edit `src/slices/index.ts` (code generated)
-- Use Slice Machine UI for creating new slices and custom types
-- Slice components should be self-contained with their own styles and types
-- Use the slice's `primary` and `items` props as defined in the slice model
-
-### Environment Variables
-
-- Use `NEXT_PUBLIC_` prefix for client-side variables
-- Prismic repository name configured via `NEXT_PUBLIC_PRISMIC_ENVIRONMENT`
-
-### Performance
-
-- Use dynamic imports for slice components (handled automatically by Slice Machine)
-- Leverage Next.js caching for Prismic requests in production
-- Use appropriate revalidation strategies for static generation
-
-## Development Workflow
-
-1. **Package Manager**: This project strictly uses pnpm. The `packageManager` field and preinstall hook enforce pnpm usage.
-2. Start development with `pnpm dev` to run both Next.js and Slice Machine
-3. Create slices using Slice Machine UI at http://localhost:3000/slice-simulator
-4. Implement slice components in `src/slices/`
-5. Test changes in the Slice Simulator
-6. Run `pnpm lint` and `pnpm format` before committing
-
-## File Generation Rules
-
-- Slice Machine generates `src/slices/index.ts` - DO NOT EDIT
-- Prismic generates types in `prismicio-types.d.ts` - DO NOT EDIT
-- Custom types are managed through Slice Machine UI
-- Always run `pnpm format` after code generation
-
-## MCP (Model Context Protocol) Usage
-
-### General Guidelines
-
-- **Always prioritize MCP tools** when available for any task (Prismic, web search, code search, etc.)
-- MCP tools provide real-time context and up-to-date information that supersedes local knowledge
-- Assume MCP tools will provide current API documentation, best practices, and examples
-- Use MCP tools before relying on local code examination or assumptions
-
-### Available MCP Tools
-
-- **Prismic MCP Tools**: Use for all Prismic-related tasks (slice creation, modeling, mocking, coding)
-- **Code Search MCP**: Use for finding code patterns, API documentation, and implementation examples
-- **Web Search MCP**: Use for current information beyond local documentation
-- **Context7 MCP**: Use for library documentation and code examples
-
-### External Documentation
-
-- **Prismic Next.js Documentation**: https://prismic.io/docs/nextjs - Official Prismic Next.js integration guide
-
-# Prismic with Next.js Documentation Summary
-
-This is a detailed summary of Prismic documentation for integrating with **Next.js** (as of December 2025), based on main hub page at https://prismic.io/docs/nextjs. It serves as comprehensive reference notes for an agent's knowledge file.
-
-Prismic offers first-party integration with Next.js, supporting key features like:
-
-- Building pages with **slices** and page types.
-- Live previews in Page Builder.
-- Full-website draft previews.
-- Content modeling via **Slice Machine**.
-- Type-safe fetching with `@prismicio/client` and generated TypeScript types.
-- Multi-language support (locales).
-- Next.js optimizations: App Router/Pages Router, image optimization, Server Components, Incremental Static Revalidation (ISR), and data caching.
-
-The docs recommend using **App Router** with TypeScript.
-
-## Setup Process
-
-1. **Create a Prismic Repository**  
-   In Prismic dashboard, create a new repository and select "Connect your own web app".
-
-2. **Integrate Prismic into Next.js**  
-   Use `@slicemachine/init` (guided from repository dashboard):
-   - Installs Slice Machine, `@prismicio/react`, `@prismicio/client`.
-   - Sets up preview/exit-preview endpoints (`/api/preview`, `/api/exit-preview`).
-   - Sets up revalidation endpoint (`/api/revalidate`).
-   - Creates slice simulator page (`/slice-simulator`).
-   - Generates `prismicio.ts` client and `slicemachine.config.json`.
-
-3. **Model Content**  
-   Use Slice Machine to create page types (e.g., homepage, general pages) with slices.
-
-4. **Enable Previews**  
-   Minor manual configuration required (detailed below).
-
-5. **Deploy**  
-   Host site (e.g., Vercel/Netlify) and set up webhooks for content updates.
-
-6. **Publish Content**  
-   Writers can now create/publish in Prismic.
-
-## Key Concepts
-
-### Routes and Route Resolvers
-
-Define routes in `prismicio.ts` to resolve internal links:
-
-```typescript
-const routes: Route[] = [
-  { type: "homepage", path: "/" },
-  { type: "page", path: "/:uid" },
-  { type: "blog_post", path: "/blog/:uid" },
-];
+```
+src/
+├── app/
+│   ├── (frontend)/          # Frontend routes
+│   └── (payload)/           # Payload admin routes
+├── collections/             # Collection configs
+├── globals/                 # Global configs
+├── components/              # Custom React components
+├── hooks/                   # Hook functions
+├── access/                  # Access control functions
+└── payload.config.ts        # Main config
 ```
 
-Matches Next.js file-system routing (App: `app/[uid]/page.tsx`; Pages: `pages/[uid].tsx`).
+## Configuration
 
-### Slices
+### Minimal Config Pattern
 
-Reusable page sections modeled in Slice Machine.
+```typescript
+import { buildConfig } from 'payload'
+import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-- Generates React components in `src/slices/`.
-- Render with `<SliceZone slices={page.data.slices} components={components} />`.
+const filename = fileURLToPath(import.meta.url)
+const dirname = path.dirname(filename)
 
-Example Slice Component:
+export default buildConfig({
+  admin: {
+    user: 'users',
+    importMap: {
+      baseDir: path.resolve(dirname),
+    },
+  },
+  collections: [Users, Media],
+  editor: lexicalEditor(),
+  secret: process.env.PAYLOAD_SECRET,
+  typescript: {
+    outputFile: path.resolve(dirname, 'payload-types.ts'),
+  },
+  db: mongooseAdapter({
+    url: process.env.DATABASE_URL,
+  }),
+})
+```
+
+## Collections
+
+### Basic Collection
+
+```typescript
+import type { CollectionConfig } from 'payload'
+
+export const Posts: CollectionConfig = {
+  slug: 'posts',
+  admin: {
+    useAsTitle: 'title',
+    defaultColumns: ['title', 'author', 'status', 'createdAt'],
+  },
+  fields: [
+    { name: 'title', type: 'text', required: true },
+    { name: 'slug', type: 'text', unique: true, index: true },
+    { name: 'content', type: 'richText' },
+    { name: 'author', type: 'relationship', relationTo: 'users' },
+  ],
+  timestamps: true,
+}
+```
+
+### Auth Collection with RBAC
+
+```typescript
+export const Users: CollectionConfig = {
+  slug: 'users',
+  auth: true,
+  fields: [
+    {
+      name: 'roles',
+      type: 'select',
+      hasMany: true,
+      options: ['admin', 'editor', 'user'],
+      defaultValue: ['user'],
+      required: true,
+      saveToJWT: true, // Include in JWT for fast access checks
+      access: {
+        update: ({ req: { user } }) => user?.roles?.includes('admin'),
+      },
+    },
+  ],
+}
+```
+
+## Fields
+
+### Common Patterns
+
+```typescript
+// Auto-generate slugs
+import { slugField } from 'payload'
+slugField({ fieldToUse: 'title' })
+
+// Relationship with filtering
+{
+  name: 'category',
+  type: 'relationship',
+  relationTo: 'categories',
+  filterOptions: { active: { equals: true } },
+}
+
+// Conditional field
+{
+  name: 'featuredImage',
+  type: 'upload',
+  relationTo: 'media',
+  admin: {
+    condition: (data) => data.featured === true,
+  },
+}
+
+// Virtual field
+{
+  name: 'fullName',
+  type: 'text',
+  virtual: true,
+  hooks: {
+    afterRead: [({ siblingData }) => `${siblingData.firstName} ${siblingData.lastName}`],
+  },
+}
+```
+
+## CRITICAL SECURITY PATTERNS
+
+### 1. Local API Access Control (MOST IMPORTANT)
+
+```typescript
+// ❌ SECURITY BUG: Access control bypassed
+await payload.find({
+  collection: 'posts',
+  user: someUser, // Ignored! Operation runs with ADMIN privileges
+})
+
+// ✅ SECURE: Enforces user permissions
+await payload.find({
+  collection: 'posts',
+  user: someUser,
+  overrideAccess: false, // REQUIRED
+})
+
+// ✅ Administrative operation (intentional bypass)
+await payload.find({
+  collection: 'posts',
+  // No user, overrideAccess defaults to true
+})
+```
+
+**Rule**: When passing `user` to Local API, ALWAYS set `overrideAccess: false`
+
+### 2. Transaction Safety in Hooks
+
+```typescript
+// ❌ DATA CORRUPTION RISK: Separate transaction
+hooks: {
+  afterChange: [
+    async ({ doc, req }) => {
+      await req.payload.create({
+        collection: 'audit-log',
+        data: { docId: doc.id },
+        // Missing req - runs in separate transaction!
+      })
+    },
+  ],
+}
+
+// ✅ ATOMIC: Same transaction
+hooks: {
+  afterChange: [
+    async ({ doc, req }) => {
+      await req.payload.create({
+        collection: 'audit-log',
+        data: { docId: doc.id },
+        req, // Maintains atomicity
+      })
+    },
+  ],
+}
+```
+
+**Rule**: ALWAYS pass `req` to nested operations in hooks
+
+### 3. Prevent Infinite Hook Loops
+
+```typescript
+// ❌ INFINITE LOOP
+hooks: {
+  afterChange: [
+    async ({ doc, req }) => {
+      await req.payload.update({
+        collection: 'posts',
+        id: doc.id,
+        data: { views: doc.views + 1 },
+        req,
+      }) // Triggers afterChange again!
+    },
+  ],
+}
+
+// ✅ SAFE: Use context flag
+hooks: {
+  afterChange: [
+    async ({ doc, req, context }) => {
+      if (context.skipHooks) return
+
+      await req.payload.update({
+        collection: 'posts',
+        id: doc.id,
+        data: { views: doc.views + 1 },
+        context: { skipHooks: true },
+        req,
+      })
+    },
+  ],
+}
+```
+
+## Access Control
+
+### Collection-Level Access
+
+```typescript
+import type { Access } from 'payload'
+
+// Boolean return
+const authenticated: Access = ({ req: { user } }) => Boolean(user)
+
+// Query constraint (row-level security)
+const ownPostsOnly: Access = ({ req: { user } }) => {
+  if (!user) return false
+  if (user?.roles?.includes('admin')) return true
+
+  return {
+    author: { equals: user.id },
+  }
+}
+
+// Async access check
+const projectMemberAccess: Access = async ({ req, id }) => {
+  const { user, payload } = req
+
+  if (!user) return false
+  if (user.roles?.includes('admin')) return true
+
+  const project = await payload.findByID({
+    collection: 'projects',
+    id: id as string,
+    depth: 0,
+  })
+
+  return project.members?.includes(user.id)
+}
+```
+
+### Field-Level Access
+
+```typescript
+// Field access ONLY returns boolean (no query constraints)
+{
+  name: 'salary',
+  type: 'number',
+  access: {
+    read: ({ req: { user }, doc }) => {
+      // Self can read own salary
+      if (user?.id === doc?.id) return true
+      // Admin can read all
+      return user?.roles?.includes('admin')
+    },
+    update: ({ req: { user } }) => {
+      // Only admins can update
+      return user?.roles?.includes('admin')
+    },
+  },
+}
+```
+
+### Common Access Patterns
+
+```typescript
+// Anyone
+export const anyone: Access = () => true
+
+// Authenticated only
+export const authenticated: Access = ({ req: { user } }) => Boolean(user)
+
+// Admin only
+export const adminOnly: Access = ({ req: { user } }) => {
+  return user?.roles?.includes('admin')
+}
+
+// Admin or self
+export const adminOrSelf: Access = ({ req: { user } }) => {
+  if (user?.roles?.includes('admin')) return true
+  return { id: { equals: user?.id } }
+}
+
+// Published or authenticated
+export const authenticatedOrPublished: Access = ({ req: { user } }) => {
+  if (user) return true
+  return { _status: { equals: 'published' } }
+}
+```
+
+## Hooks
+
+### Common Hook Patterns
+
+```typescript
+import type { CollectionConfig } from 'payload'
+
+export const Posts: CollectionConfig = {
+  slug: 'posts',
+  hooks: {
+    // Before validation - format data
+    beforeValidate: [
+      async ({ data, operation }) => {
+        if (operation === 'create') {
+          data.slug = slugify(data.title)
+        }
+        return data
+      },
+    ],
+
+    // Before save - business logic
+    beforeChange: [
+      async ({ data, req, operation, originalDoc }) => {
+        if (operation === 'update' && data.status === 'published') {
+          data.publishedAt = new Date()
+        }
+        return data
+      },
+    ],
+
+    // After save - side effects
+    afterChange: [
+      async ({ doc, req, operation, previousDoc, context }) => {
+        // Check context to prevent loops
+        if (context.skipNotification) return
+
+        if (operation === 'create') {
+          await sendNotification(doc)
+        }
+        return doc
+      },
+    ],
+
+    // After read - computed fields
+    afterRead: [
+      async ({ doc, req }) => {
+        doc.viewCount = await getViewCount(doc.id)
+        return doc
+      },
+    ],
+
+    // Before delete - cascading deletes
+    beforeDelete: [
+      async ({ req, id }) => {
+        await req.payload.delete({
+          collection: 'comments',
+          where: { post: { equals: id } },
+          req, // Important for transaction
+        })
+      },
+    ],
+  },
+}
+```
+
+## Queries
+
+### Local API
+
+```typescript
+// Find with complex query
+const posts = await payload.find({
+  collection: 'posts',
+  where: {
+    and: [{ status: { equals: 'published' } }, { 'author.name': { contains: 'john' } }],
+  },
+  depth: 2, // Populate relationships
+  limit: 10,
+  sort: '-createdAt',
+  select: {
+    title: true,
+    author: true,
+  },
+})
+
+// Find by ID
+const post = await payload.findByID({
+  collection: 'posts',
+  id: '123',
+  depth: 2,
+})
+
+// Create
+const newPost = await payload.create({
+  collection: 'posts',
+  data: {
+    title: 'New Post',
+    status: 'draft',
+  },
+})
+
+// Update
+await payload.update({
+  collection: 'posts',
+  id: '123',
+  data: { status: 'published' },
+})
+
+// Delete
+await payload.delete({
+  collection: 'posts',
+  id: '123',
+})
+```
+
+### Query Operators
+
+```typescript
+// Equals
+{ status: { equals: 'published' } }
+
+// Not equals
+{ status: { not_equals: 'draft' } }
+
+// Greater than / less than
+{ price: { greater_than: 100 } }
+{ age: { less_than_equal: 65 } }
+
+// Contains (case-insensitive)
+{ title: { contains: 'payload' } }
+
+// Like (all words present)
+{ description: { like: 'cms headless' } }
+
+// In array
+{ category: { in: ['tech', 'news'] } }
+
+// Exists
+{ image: { exists: true } }
+
+// Near (geospatial)
+{ location: { near: [-122.4194, 37.7749, 10000] } }
+```
+
+### AND/OR Logic
+
+```typescript
+{
+  or: [
+    { status: { equals: 'published' } },
+    { author: { equals: user.id } },
+  ],
+}
+
+{
+  and: [
+    { status: { equals: 'published' } },
+    { featured: { equals: true } },
+  ],
+}
+```
+
+## Getting Payload Instance
+
+```typescript
+// In API routes (Next.js)
+import { getPayload } from 'payload'
+import config from '@payload-config'
+
+export async function GET() {
+  const payload = await getPayload({ config })
+
+  const posts = await payload.find({
+    collection: 'posts',
+  })
+
+  return Response.json(posts)
+}
+
+// In Server Components
+import { getPayload } from 'payload'
+import config from '@payload-config'
+
+export default async function Page() {
+  const payload = await getPayload({ config })
+  const { docs } = await payload.find({ collection: 'posts' })
+
+  return <div>{docs.map(post => <h1 key={post.id}>{post.title}</h1>)}</div>
+}
+```
+
+## Components
+
+The Admin Panel can be extensively customized using React Components. Custom Components can be Server Components (default) or Client Components.
+
+### Defining Components
+
+Components are defined using **file paths** (not direct imports) in your config:
+
+**Component Path Rules:**
+
+- Paths are relative to project root or `config.admin.importMap.baseDir`
+- Named exports: use `#ExportName` suffix or `exportName` property
+- Default exports: no suffix needed
+- File extensions can be omitted
+
+```typescript
+import { buildConfig } from 'payload'
+
+export default buildConfig({
+  admin: {
+    components: {
+      // Logo and branding
+      graphics: {
+        Logo: '/components/Logo',
+        Icon: '/components/Icon',
+      },
+
+      // Navigation
+      Nav: '/components/CustomNav',
+      beforeNavLinks: ['/components/CustomNavItem'],
+      afterNavLinks: ['/components/NavFooter'],
+
+      // Header
+      header: ['/components/AnnouncementBanner'],
+      actions: ['/components/ClearCache', '/components/Preview'],
+
+      // Dashboard
+      beforeDashboard: ['/components/WelcomeMessage'],
+      afterDashboard: ['/components/Analytics'],
+
+      // Auth
+      beforeLogin: ['/components/SSOButtons'],
+      logout: { Button: '/components/LogoutButton' },
+
+      // Settings
+      settingsMenu: ['/components/SettingsMenu'],
+
+      // Views
+      views: {
+        dashboard: { Component: '/components/CustomDashboard' },
+      },
+    },
+  },
+})
+```
+
+**Component Path Rules:**
+
+- Paths are relative to project root or `config.admin.importMap.baseDir`
+- Named exports: use `#ExportName` suffix or `exportName` property
+- Default exports: no suffix needed
+- File extensions can be omitted
+
+### Component Types
+
+1. **Root Components** - Global Admin Panel (logo, nav, header)
+2. **Collection Components** - Collection-specific (edit view, list view)
+3. **Global Components** - Global document views
+4. **Field Components** - Custom field UI and cells
+
+### Component Types
+
+1. **Root Components** - Global Admin Panel (logo, nav, header)
+2. **Collection Components** - Collection-specific (edit view, list view)
+3. **Global Components** - Global document views
+4. **Field Components** - Custom field UI and cells
+
+### Server vs Client Components
+
+**All components are Server Components by default** (can use Local API directly):
 
 ```tsx
-export default function CallToAction({ slice }) {
+// Server Component (default)
+import type { Payload } from 'payload'
+
+async function MyServerComponent({ payload }: { payload: Payload }) {
+  const posts = await payload.find({ collection: 'posts' })
+  return <div>{posts.totalDocs} posts</div>
+}
+
+export default MyServerComponent
+```
+
+**Client Components** need the `'use client'` directive:
+
+```tsx
+'use client'
+import { useState } from 'react'
+import { useAuth } from '@payloadcms/ui'
+
+export function MyClientComponent() {
+  const [count, setCount] = useState(0)
+  const { user } = useAuth()
+
   return (
-    <section>
-      <PrismicRichText field={slice.primary.text} />
-      <PrismicNextLink field={slice.primary.link} />
-    </section>
-  );
+    <button onClick={() => setCount(count + 1)}>
+      {user?.email}: Clicked {count} times
+    </button>
+  )
 }
 ```
 
-### Prismic Client Setup (`prismicio.ts`)
-
-**App Router** (recommended):
-
-```typescript
-export function createClient(config = {}) {
-  const client = baseCreateClient(repositoryName, {
-    routes,
-    fetchOptions:
-      process.env.NODE_ENV === "production"
-        ? { next: { tags: ["prismic"] }, cache: "force-cache" }
-        : { next: { revalidate: 5 } },
-    ...config,
-  });
-  enableAutoPreviews({ client });
-  return client;
-}
-```
-
-**Pages Router**:
-Passes `previewData` and `req` for previews.
-
-### Fetching Content
-
-**App Router** (Server Components):
+### Using Hooks (Client Components Only)
 
 ```tsx
-export default async function Page({ params }) {
-  const client = createClient();
-  const page = await client.getByUID("page", params.uid);
-  return <SliceZone slices={page.data.slices} components={components} />;
+'use client'
+import {
+  useAuth, // Current user
+  useConfig, // Payload config (client-safe)
+  useDocumentInfo, // Document info (id, collection, etc.)
+  useField, // Field value and setter
+  useForm, // Form state
+  useFormFields, // Multiple field values (optimized)
+  useLocale, // Current locale
+  useTranslation, // i18n translations
+  usePayload, // Local API methods
+} from '@payloadcms/ui'
+
+export function MyComponent() {
+  const { user } = useAuth()
+  const { config } = useConfig()
+  const { id, collection } = useDocumentInfo()
+  const locale = useLocale()
+  const { t } = useTranslation()
+
+  return <div>Hello {user?.email}</div>
 }
 ```
 
-**Pages Router** (getStaticProps):
-Similar, but props passed to component.
+### Collection/Global Components
 
-Avoid fetching in slices with Pages Router; use context or relationships.
+```typescript
+export const Posts: CollectionConfig = {
+  slug: 'posts',
+  admin: {
+    components: {
+      // Edit view
+      edit: {
+        PreviewButton: '/components/PostPreview',
+        SaveButton: '/components/CustomSave',
+        SaveDraftButton: '/components/SaveDraft',
+        PublishButton: '/components/Publish',
+      },
 
-### Displaying Content (`@prismicio/react` & `@prismicio/next`)
+      // List view
+      list: {
+        Header: '/components/ListHeader',
+        beforeList: ['/components/BulkActions'],
+        afterList: ['/components/ListFooter'],
+      },
+    },
+  },
+}
+```
 
-- `<PrismicRichText field={...} />` — Rich text.
-- `<PrismicText field={...} />` — Key text/title.
-- `<PrismicNextLink field={...} />` — Internal/external links.
-- `<PrismicNextImage field={...} />` — Optimized images.
+### Field Components
+
+```typescript
+{
+  name: 'status',
+  type: 'select',
+  options: ['draft', 'published'],
+  admin: {
+    components: {
+      // Edit view field
+      Field: '/components/StatusField',
+      // List view cell
+      Cell: '/components/StatusCell',
+      // Field label
+      Label: '/components/StatusLabel',
+      // Field description
+      Description: '/components/StatusDescription',
+      // Error message
+      Error: '/components/StatusError',
+    },
+  },
+}
+```
+
+**UI Field** (presentational only, no data):
+
+```typescript
+{
+  name: 'refundButton',
+  type: 'ui',
+  admin: {
+    components: {
+      Field: '/components/RefundButton',
+    },
+  },
+}
+```
+
+### Performance Best Practices
+
+1. **Import correctly:**
+
+   - Admin Panel: `import { Button } from '@payloadcms/ui'`
+   - Frontend: `import { Button } from '@payloadcms/ui/elements/Button'`
+
+2. **Optimize re-renders:**
+
+   ```tsx
+   // ❌ BAD: Re-renders on every form change
+   const { fields } = useForm()
+
+   // ✅ GOOD: Only re-renders when specific field changes
+   const value = useFormFields(([fields]) => fields[path])
+   ```
+
+3. **Prefer Server Components** - Only use Client Components when you need:
+
+   - State (useState, useReducer)
+   - Effects (useEffect)
+   - Event handlers (onClick, onChange)
+   - Browser APIs (localStorage, window)
+
+4. **Minimize serialized props** - Server Components serialize props sent to client
+
+### Styling Components
+
+```tsx
+import './styles.scss'
+
+export function MyComponent() {
+  return <div className="my-component">Content</div>
+}
+```
+
+```scss
+// Use Payload's CSS variables
+.my-component {
+  background-color: var(--theme-elevation-500);
+  color: var(--theme-text);
+  padding: var(--base);
+  border-radius: var(--border-radius-m);
+}
+
+// Import Payload's SCSS library
+@import '~@payloadcms/ui/scss';
+
+.my-component {
+  @include mid-break {
+    background-color: var(--theme-elevation-900);
+  }
+}
+```
+
+### Type Safety
+
+```tsx
+import type {
+  TextFieldServerComponent,
+  TextFieldClientComponent,
+  TextFieldCellComponent,
+  SelectFieldServerComponent,
+  // ... etc
+} from 'payload'
+
+export const MyField: TextFieldClientComponent = (props) => {
+  // Fully typed props
+}
+```
+
+### Import Map
+
+Payload auto-generates `app/(payload)/admin/importMap.js` to resolve component paths.
+
+**Regenerate manually:**
+
+```bash
+payload generate:importmap
+```
+
+**Set custom location:**
+
+```typescript
+export default buildConfig({
+  admin: {
+    importMap: {
+      baseDir: path.resolve(dirname, 'src'),
+      importMapFile: path.resolve(dirname, 'app', 'custom-import-map.js'),
+    },
+  },
+})
+```
+
+## Custom Endpoints
+
+```typescript
+import type { Endpoint } from 'payload'
+import { APIError } from 'payload'
+
+// Always check authentication
+export const protectedEndpoint: Endpoint = {
+  path: '/protected',
+  method: 'get',
+  handler: async (req) => {
+    if (!req.user) {
+      throw new APIError('Unauthorized', 401)
+    }
+
+    // Use req.payload for database operations
+    const data = await req.payload.find({
+      collection: 'posts',
+      where: { author: { equals: req.user.id } },
+    })
+
+    return Response.json(data)
+  },
+}
+
+// Route parameters
+export const trackingEndpoint: Endpoint = {
+  path: '/:id/tracking',
+  method: 'get',
+  handler: async (req) => {
+    const { id } = req.routeParams
+
+    const tracking = await getTrackingInfo(id)
+
+    if (!tracking) {
+      return Response.json({ error: 'not found' }, { status: 404 })
+    }
+
+    return Response.json(tracking)
+  },
+}
+```
+
+## Drafts & Versions
+
+```typescript
+export const Pages: CollectionConfig = {
+  slug: 'pages',
+  versions: {
+    drafts: {
+      autosave: true,
+      schedulePublish: true,
+      validate: false, // Don't validate drafts
+    },
+    maxPerDoc: 100,
+  },
+  access: {
+    read: ({ req: { user } }) => {
+      // Public sees only published
+      if (!user) return { _status: { equals: 'published' } }
+      // Authenticated sees all
+      return true
+    },
+  },
+}
+
+// Create draft
+await payload.create({
+  collection: 'pages',
+  data: { title: 'Draft Page' },
+  draft: true, // Skips required field validation
+})
+
+// Read with drafts
+const page = await payload.findByID({
+  collection: 'pages',
+  id: '123',
+  draft: true, // Returns draft if available
+})
+```
+
+## Field Type Guards
+
+```typescript
+import {
+  fieldAffectsData,
+  fieldHasSubFields,
+  fieldIsArrayType,
+  fieldIsBlockType,
+  fieldSupportsMany,
+  fieldHasMaxDepth,
+} from 'payload'
+
+function processField(field: Field) {
+  // Check if field stores data
+  if (fieldAffectsData(field)) {
+    console.log(field.name) // Safe to access
+  }
+
+  // Check if field has nested fields
+  if (fieldHasSubFields(field)) {
+    field.fields.forEach(processField) // Safe to access
+  }
+
+  // Check field type
+  if (fieldIsArrayType(field)) {
+    console.log(field.minRows, field.maxRows)
+  }
+
+  // Check capabilities
+  if (fieldSupportsMany(field) && field.hasMany) {
+    console.log('Multiple values supported')
+  }
+}
+```
+
+## Plugins
+
+### Using Plugins
+
+```typescript
+import { seoPlugin } from '@payloadcms/plugin-seo'
+import { redirectsPlugin } from '@payloadcms/plugin-redirects'
+
+export default buildConfig({
+  plugins: [
+    seoPlugin({
+      collections: ['posts', 'pages'],
+    }),
+    redirectsPlugin({
+      collections: ['pages'],
+    }),
+  ],
+})
+```
+
+### Creating Plugins
+
+```typescript
+import type { Config, Plugin } from 'payload'
+
+interface MyPluginConfig {
+  collections?: string[]
+  enabled?: boolean
+}
+
+export const myPlugin =
+  (options: MyPluginConfig): Plugin =>
+  (config: Config): Config => ({
+    ...config,
+    collections: config.collections?.map((collection) => {
+      if (options.collections?.includes(collection.slug)) {
+        return {
+          ...collection,
+          fields: [...collection.fields, { name: 'pluginField', type: 'text' }],
+        }
+      }
+      return collection
+    }),
+  })
+```
+
+## Best Practices
 
 ### Security
 
-Set API to "Private" and use access token via `PRISMIC_ACCESS_TOKEN` env var.
+1. Always set `overrideAccess: false` when passing `user` to Local API
+2. Field-level access only returns boolean (no query constraints)
+3. Default to restrictive access, gradually add permissions
+4. Never trust client-provided data
+5. Use `saveToJWT: true` for roles to avoid database lookups
 
-## Previews
+### Performance
 
-### Live Previews (Slice Simulator)
+1. Index frequently queried fields
+2. Use `select` to limit returned fields
+3. Set `maxDepth` on relationships to prevent over-fetching
+4. Use query constraints over async operations in access control
+5. Cache expensive operations in `req.context`
 
-- Page at `/slice-simulator`.
-- Configure simulator URL in Prismic Page Builder.
+### Data Integrity
 
-### Draft Previews
+1. Always pass `req` to nested operations in hooks
+2. Use context flags to prevent infinite hook loops
+3. Enable transactions for MongoDB (requires replica set) and Postgres
+4. Use `beforeValidate` for data formatting
+5. Use `beforeChange` for business logic
 
-- App Router: Wrap root layout with `<PrismicPreview>`, use Draft Mode.
-- Pages Router: Wrap `_app.tsx` with `<PrismicPreview>`, use Preview Mode.
-- Endpoints: `/api/preview` (enter), `/api/exit-preview` (exit).
-- Configure preview site in Prismic repo settings.
+### Type Safety
 
-## Deployment & Content Updates
+1. Run `generate:types` after schema changes
+2. Import types from generated `payload-types.ts`
+3. Type your user object: `import type { User } from '@/payload-types'`
+4. Use `as const` for field options
+5. Use field type guards for runtime type checking
 
-**App Router**:
+### Organization
 
-- `/api/revalidate` handler revalidates `prismic` tag.
-- Add Prismic webhook to trigger on publish/unpublish.
+1. Keep collections in separate files
+2. Extract access control to `access/` directory
+3. Extract hooks to `hooks/` directory
+4. Use reusable field factories for common patterns
+5. Document complex access control with comments
 
-**Pages Router**:
+## Common Gotchas
 
-- Webhook triggers full rebuild.
+1. **Local API Default**: Access control bypassed unless `overrideAccess: false`
+2. **Transaction Safety**: Missing `req` in nested operations breaks atomicity
+3. **Hook Loops**: Operations in hooks can trigger the same hooks
+4. **Field Access**: Cannot use query constraints, only boolean
+5. **Relationship Depth**: Default depth is 2, set to 0 for IDs only
+6. **Draft Status**: `_status` field auto-injected when drafts enabled
+7. **Type Generation**: Types not updated until `generate:types` runs
+8. **MongoDB Transactions**: Require replica set configuration
+9. **SQLite Transactions**: Disabled by default, enable with `transactionOptions: {}`
+10. **Point Fields**: Not supported in SQLite
 
-## SEO
+## Additional Context Files
 
-Add meta fields (title, description, image) to custom types.  
-Generate metadata in pages (App: `generateMetadata`; Pages: `<Head>`).
+For deeper exploration of specific topics, refer to the context files located in `.cursor/rules/`:
 
-## Internationalization (i18n)
+### Available Context Files
 
-- Install `negotiator` and `@formatjs/intl-localematcher`.
-- Define locales mapping.
-- **App Router**: Middleware for locale redirects, nest routes under `[lang]`.
-- **Pages Router**: `next.config.js` i18n config.
-- Query with `lang` param; use `lang: "*"` for all locales in static generation.
+1. **`payload-overview.md`** - High-level architecture and core concepts
 
-## Additional Resources in Docs
+   - Payload structure and initialization
+   - Configuration fundamentals
+   - Database adapters overview
 
-- Content Modeling: https://prismic.io/docs/technologies/model-content-nextjs
-- Slices: Various guides on creating/displaying.
-- Technical References: `@prismicio/next`, `@prismicio/react`, `@prismicio/client`.
-- Crash Course: https://prismic.io/docs/nextjs-crash-course
+2. **`security-critical.md`** - Critical security patterns (⚠️ IMPORTANT)
 
-This integration emphasizes developer experience (TypeScript, Slice Machine) and editor experience (previews, slices). For production, always secure the API and configure caching/revalidation properly.
+   - Local API access control
+   - Transaction safety in hooks
+   - Preventing infinite hook loops
 
-### MCP Workflow Priority
+3. **`collections.md`** - Collection configurations
 
-1. **First**: Check if MCP tool exists for the task
-2. **Second**: Use MCP tool to get current context/documentation
-3. **Third**: Apply MCP-provided information to local codebase
-4. **Last**: Fall back to local examination if MCP unavailable
+   - Basic collection patterns
+   - Auth collections with RBAC
+   - Upload collections
+   - Drafts and versioning
+   - Globals
 
-### Specific MCP Use Cases
+4. **`fields.md`** - Field types and patterns
 
-- **Prismic Slices**: Use `prismic_how_to_model_slice`, `prismic_how_to_mock_slice`, `prismic_how_to_code_slice`, `prismic_save_slice_data`
-- **Code Research**: Use `codesearch` for library documentation and examples
-- **Web Information**: Use `websearch` for current trends and solutions
-- **Library Documentation**: Use `context7_resolve-library-id` and `context7_query-docs` for detailed API references
+   - All field types with examples
+   - Conditional fields
+   - Virtual fields
+   - Field validation
+   - Common field patterns
+
+5. **`field-type-guards.md`** - TypeScript field type utilities
+
+   - Field type checking utilities
+   - Safe type narrowing
+   - Runtime field validation
+
+6. **`access-control.md`** - Permission patterns
+
+   - Collection-level access
+   - Field-level access
+   - Row-level security
+   - RBAC patterns
+   - Multi-tenant access control
+
+7. **`access-control-advanced.md`** - Complex access patterns
+
+   - Nested document access
+   - Cross-collection permissions
+   - Dynamic role hierarchies
+   - Performance optimization
+
+8. **`hooks.md`** - Lifecycle hooks
+
+   - Collection hooks
+   - Field hooks
+   - Hook context patterns
+   - Common hook recipes
+
+9. **`queries.md`** - Database operations
+
+   - Local API usage
+   - Query operators
+   - Complex queries with AND/OR
+   - Performance optimization
+
+10. **`endpoints.md`** - Custom API endpoints
+
+    - REST endpoint patterns
+    - Authentication in endpoints
+    - Error handling
+    - Route parameters
+
+11. **`adapters.md`** - Database and storage adapters
+
+    - MongoDB, PostgreSQL, SQLite patterns
+    - Storage adapter usage (S3, Azure, GCS, etc.)
+    - Custom adapter development
+
+12. **`plugin-development.md`** - Creating plugins
+
+    - Plugin architecture
+    - Modifying configuration
+    - Plugin hooks
+    - Best practices
+
+13. **`components.md`** - Custom Components
+
+    - Component types (Root, Collection, Global, Field)
+    - Server vs Client Components
+    - Component paths and definition
+    - Default and custom props
+    - Using hooks
+    - Performance best practices
+    - Styling components
+
+## Resources
+
+- Docs: https://payloadcms.com/docs
+- LLM Context: https://payloadcms.com/llms-full.txt
+- GitHub: https://github.com/payloadcms/payload
+- Examples: https://github.com/payloadcms/payload/tree/main/examples
+- Templates: https://github.com/payloadcms/payload/tree/main/templates
