@@ -8,20 +8,26 @@ export default async function BlogPage() {
   const client = createClient();
   
   // Get all blog posts, sorted by publication date
-  const blogPosts = await client.getAllByType("blog_post" as any, {
-    orderings: [
-      { field: "my.blog_post.publication_date", direction: "desc" }
-    ],
-    fetch: [
-      "blog_post.title",
-      "blog_post.excerpt",
-      "blog_post.featured_image",
-      "blog_post.publication_date",
-      "blog_post.author",
-      "blog_post.reading_time",
-      "blog_post.tags"
-    ]
-  });
+  let blogPosts: any[] = [];
+  try {
+    blogPosts = await client.getAllByType("blog_post" as any, {
+      orderings: [
+        { field: "my.blog_post.publication_date", direction: "desc" }
+      ],
+      fetch: [
+        "blog_post.title",
+        "blog_post.excerpt",
+        "blog_post.featured_image",
+        "blog_post.publication_date",
+        "blog_post.author",
+        "blog_post.reading_time",
+        "blog_post.tags"
+      ]
+    });
+  } catch (error) {
+    // Ignore error if blog_post type doesn't exist yet
+    console.log("Blog posts not available:", error);
+  }
 
   return (
     <main className="container mx-auto px-4 py-8">

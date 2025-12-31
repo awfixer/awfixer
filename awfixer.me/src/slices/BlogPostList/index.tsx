@@ -42,7 +42,8 @@ const BlogPostList: FC<BlogPostListProps> = ({ slice }) => {
         });
         setBlogPosts(posts);
       } catch (error) {
-        console.error("Error fetching blog posts:", error);
+        console.log("Blog posts not available:", error);
+        setBlogPosts([]);
       } finally {
         setLoading(false);
       }

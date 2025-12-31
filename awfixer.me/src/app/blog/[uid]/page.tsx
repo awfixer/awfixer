@@ -115,11 +115,3 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   }
 }
 
-export async function generateStaticParams() {
-  const client = createClient();
-  const posts = await client.getAllByType("blog_post" as any);
-  
-  return posts.map((post) => ({
-    uid: post.uid,
-  }));
-}
