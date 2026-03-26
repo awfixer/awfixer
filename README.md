@@ -9,7 +9,7 @@
 
   <br />
 
-  "understanding of that which humanity can do may only be achieved with an understanding of that which humanity has done." 
+  "understanding of that which humanity can do may only be achieved with an understanding of that which humanity has done." - awfixer
 </p>
 
 
