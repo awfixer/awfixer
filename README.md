@@ -16,7 +16,6 @@
 
 <br />
 
-you can book a chat with me using this <a href="https://theautist.link/chat">link</a>
 
 im watching you
 
