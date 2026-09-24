@@ -1,106 +1,47 @@
-export type NavIconName =
-  | "BookOpen"
-  | "Newspaper"
-  | "Terminal"
-  | "Info"
-  | "Shield"
-  | "Flag"
-  | "Landmark"
+import navFile from "./nav.json"
 
-export type NavChild = {
-  name: string
-  href: string
-  description: string
-  external?: boolean
-  icon: NavIconName
-}
-
-export type NavGroup = {
+export type NavItem = {
   id: string
   name: string
-  /** Hub path. Omit when the trigger only opens the menu. */
-  href?: string
   description: string
-  children: NavChild[]
+  href: string
+  external: boolean
 }
 
-/**
- * Same grouped shape as the church header (the nav the party bar was
- * copied from). Destinations are this site's arms, not church routes.
- */
-export const navGroups: NavGroup[] = [
-  {
-    id: "writing",
-    name: "Writing",
-    description: "Essays, the build log, and the site they live on",
-    children: [
-      {
-        name: "The Autist",
-        href: "https://theautist.me",
-        description: "The editorial site",
-        external: true,
-        icon: "BookOpen",
-      },
-      {
-        name: "Journal",
-        href: "https://theautist.me/blog",
-        description: "Essays and notes",
-        external: true,
-        icon: "Newspaper",
-      },
-      {
-        name: "build",
-        href: "https://theautist.me/build",
-        description: "Linux terminal agent",
-        external: true,
-        icon: "Terminal",
-      },
-      {
-        name: "About",
-        href: "https://theautist.me/about",
-        description: "Who writes this",
-        external: true,
-        icon: "Info",
-      },
-    ],
-  },
-  {
-    id: "divisions",
-    name: "Divisions",
-    description: "The arms of the work",
-    children: [
-      {
-        name: "Army",
-        href: "https://awfixer.army",
-        description: "The operational arm",
-        external: true,
-        icon: "Shield",
-      },
-      {
-        name: "Party",
-        href: "https://awfixer.party",
-        description: "Civic organization",
-        external: true,
-        icon: "Flag",
-      },
-      {
-        name: "Church",
-        href: "https://awfixer.church",
-        description: "The question and the teachings",
-        external: true,
-        icon: "Landmark",
-      },
-    ],
-  },
-]
+export type NavMenu = {
+  id: string
+  name: string
+  items: NavItem[]
+}
 
-export const ctaLink = {
+function isExternal(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://")
+}
+
+function menuName(id: string) {
+  return id.charAt(0).toUpperCase() + id.slice(1)
+}
+
+export const subscribeLink = {
   name: "Subscribe",
-  href: "/#newsletter",
-} as const
+  href: navFile.subscribe,
+  external: isExternal(navFile.subscribe),
+}
+
+export const navMenu: NavMenu = {
+  id: "info",
+  name: menuName("info"),
+  items: Object.entries(navFile.info).map(([id, item]) => ({
+    id,
+    name: item.name,
+    description: item.description,
+    href: item.link,
+    external: isExternal(item.link),
+  })),
+}
 
 export function isCurrentPath(href: string, pathname: string) {
-  if (href.startsWith("http")) {
+  if (isExternal(href)) {
     return false
   }
 
@@ -113,10 +54,6 @@ export function isCurrentPath(href: string, pathname: string) {
   return pathname === path || pathname.startsWith(`${path}/`)
 }
 
-export function groupIsCurrent(group: NavGroup, pathname: string) {
-  if (group.href && isCurrentPath(group.href, pathname)) {
-    return true
-  }
-
-  return group.children.some((child) => isCurrentPath(child.href, pathname))
+export function menuIsCurrent(menu: NavMenu, pathname: string) {
+  return menu.items.some((item) => isCurrentPath(item.href, pathname))
 }

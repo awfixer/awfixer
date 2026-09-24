@@ -1,0 +1,15 @@
+{
+  "subscribe": "https://xtra.theautist.me/subscribe",
+  "info": {
+    "link1": {
+      "name": "The Autist Xtra",
+      "description": "my main publication",
+      "link": "https://theautist.link/xtra"
+    },
+    "link2": {
+      "name": "My Blog",
+      "description": "my blog, where i scream tech at the internet",
+      "link": "https://theautist.me/blog"
+    }
+  }
+}

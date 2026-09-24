@@ -275,11 +275,6 @@
   border: 1px solid var(--text-color-20);
 }
 
-.nav-panel-intro {
-  padding: 16px 16px 12px;
-  border-bottom: 1px solid var(--text-color-20);
-}
-
 .nav-kicker {
   margin: 0;
   color: var(--text-color-80);
@@ -315,17 +310,6 @@
 .nav-item-link:focus-visible,
 .nav-item-link[data-current="true"] {
   background: var(--text-color-08);
-}
-
-.nav-item-icon {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: 1px solid var(--text-color-20);
-  color: var(--text-color-80);
 }
 
 .nav-item-copy {
@@ -436,41 +420,8 @@
   overflow: auto;
 }
 
-.nav-mobile-group {
-  border-bottom: 1px solid var(--text-color-20);
-}
-
-.nav-mobile-trigger {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  width: 100%;
-  margin: 0;
-  padding: 16px 0;
-  border: 0;
-  background: none;
-  color: var(--text-color);
-  text-align: left;
-  cursor: pointer;
-}
-
-.nav-mobile-title {
-  font-size: 2rem;
-  line-height: 1;
-  letter-spacing: -0.035em;
-}
-
-.nav-mobile-trigger svg {
-  width: 24px;
-  height: 24px;
-  opacity: 0.4;
-  transition: transform 0.3s var(--ease-transition);
-}
-
-.nav-mobile-trigger svg[data-open="true"] {
-  transform: rotate(180deg);
-  opacity: 0.8;
+.nav-dialog-body .nav-kicker {
+  padding: 0 20px 8px;
 }
 
 .nav-dialog-foot {
@@ -492,12 +443,6 @@
   scroll-margin-top: 80px;
 }
 
-@media (min-width: 640px) {
-  .nav-mobile-title {
-    font-size: 2.5rem;
-  }
-}
-
 @media (min-width: 1024px) {
   .site-nav-desktop {
     display: flex;
@@ -517,8 +462,7 @@
   .site-header-bar,
   .hover-underline,
   .button,
-  .nav-trigger svg,
-  .nav-mobile-trigger svg {
+  .nav-trigger svg {
     transition-duration: var(--motion-duration-reduced);
   }
 }

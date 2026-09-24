@@ -3,19 +3,7 @@
 import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import {
-  BookOpen,
-  ChevronDown,
-  Flag,
-  Info,
-  Landmark,
-  Menu,
-  Newspaper,
-  Shield,
-  Terminal,
-  X,
-  type LucideIcon,
-} from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
 import {
   AnimatePresence,
   MotionConfig,
@@ -24,36 +12,18 @@ import {
 } from "motion/react"
 
 import {
-  ctaLink,
-  groupIsCurrent,
   isCurrentPath,
-  navGroups,
-  type NavChild,
-  type NavGroup,
-  type NavIconName,
+  menuIsCurrent,
+  navMenu,
+  subscribeLink,
+  type NavItem,
 } from "@/lib/nav"
 import { useNavStore } from "@/lib/nav-store"
 import { cn } from "@/lib/utils"
 
-const icons: Record<NavIconName, LucideIcon> = {
-  BookOpen,
-  Newspaper,
-  Terminal,
-  Info,
-  Shield,
-  Flag,
-  Landmark,
-}
-
 const enter = {
   duration: 0.5,
   ease: [0.215, 0.61, 0.355, 1] as const,
-}
-
-function NavIcon({ name }: { name: NavIconName }) {
-  const Icon = icons[name]
-
-  return <Icon aria-hidden size={16} />
 }
 
 function NavAnchor({
@@ -61,21 +31,16 @@ function NavAnchor({
   pathname,
   onNavigate,
 }: {
-  item: NavChild
+  item: NavItem
   pathname: string
   onNavigate: () => void
 }) {
   const current = isCurrentPath(item.href, pathname)
   const content = (
-    <>
-      <span className="nav-item-icon">
-        <NavIcon name={item.icon} />
-      </span>
-      <span className="nav-item-copy">
-        <span className="nav-item-name">{item.name}</span>
-        <span className="nav-item-desc">{item.description}</span>
-      </span>
-    </>
+    <span className="nav-item-copy">
+      <span className="nav-item-name">{item.name}</span>
+      <span className="nav-item-desc">{item.description}</span>
+    </span>
   )
 
   if (item.external) {
@@ -105,17 +70,30 @@ function NavAnchor({
   )
 }
 
-function NavGroupMenu({ group }: { group: NavGroup }) {
+function SubscribeLink({ onNavigate }: { onNavigate?: () => void }) {
+  return (
+    <a
+      href={subscribeLink.href}
+      className="button primary-fill"
+      target={subscribeLink.external ? "_blank" : undefined}
+      rel={subscribeLink.external ? "noopener noreferrer" : undefined}
+      onClick={onNavigate}
+    >
+      {subscribeLink.name}
+    </a>
+  )
+}
+
+function NavMenu() {
   const pathname = usePathname()
-  const openGroupId = useNavStore((state) => state.openGroupId)
-  const openGroup = useNavStore((state) => state.openGroup)
-  const scheduleCloseGroup = useNavStore((state) => state.scheduleCloseGroup)
-  const closeGroup = useNavStore((state) => state.closeGroup)
+  const menuOpen = useNavStore((state) => state.menuOpen)
+  const openMenu = useNavStore((state) => state.openMenu)
+  const scheduleCloseMenu = useNavStore((state) => state.scheduleCloseMenu)
+  const closeMenu = useNavStore((state) => state.closeMenu)
   const reduced = useReducedMotion()
   const pointerType = useRef("mouse")
-  const isOpen = openGroupId === group.id
-  const current = groupIsCurrent(group, pathname)
-  const panelId = `nav-panel-${group.id}`
+  const current = menuIsCurrent(navMenu, pathname)
+  const panelId = `nav-panel-${navMenu.id}`
 
   return (
     <motion.div
@@ -127,55 +105,55 @@ function NavGroupMenu({ group }: { group: NavGroup }) {
           return
         }
 
-        openGroup(group.id)
+        openMenu()
       }}
       onPointerLeave={(event) => {
         if (event.pointerType === "touch") {
           return
         }
 
-        scheduleCloseGroup()
+        scheduleCloseMenu()
       }}
-      onFocus={() => openGroup(group.id)}
+      onFocus={() => openMenu()}
       onBlur={(event) => {
         const next = event.relatedTarget
 
         if (!(next instanceof Node) || !event.currentTarget.contains(next)) {
-          scheduleCloseGroup()
+          scheduleCloseMenu()
         }
       }}
     >
       <button
         type="button"
         className="nav-trigger"
-        aria-expanded={isOpen}
+        aria-expanded={menuOpen}
         aria-controls={panelId}
         onClick={(event) => {
           const fromKeyboard = event.detail === 0
 
           if (!fromKeyboard && pointerType.current !== "touch") {
-            openGroup(group.id)
+            openMenu()
             return
           }
 
-          if (isOpen) {
-            closeGroup()
+          if (menuOpen) {
+            closeMenu()
             return
           }
 
-          openGroup(group.id)
+          openMenu()
         }}
       >
         <span
           className="hover-underline"
-          data-open={isOpen || current ? "true" : "false"}
+          data-open={menuOpen || current ? "true" : "false"}
         >
-          {group.name}
+          {navMenu.name}
         </span>
         <ChevronDown aria-hidden />
       </button>
       <AnimatePresence>
-        {isOpen ? (
+        {menuOpen ? (
           <motion.div
             id={panelId}
             className="nav-panel"
@@ -185,14 +163,10 @@ function NavGroupMenu({ group }: { group: NavGroup }) {
             transition={enter}
           >
             <motion.div className="nav-panel-card">
-              <motion.div className="nav-panel-intro">
-                <p className="nav-kicker">{group.name}</p>
-                <p className="nav-item-desc">{group.description}</p>
-              </motion.div>
               <ul className="nav-panel-list">
-                {group.children.map((item, index) => (
+                {navMenu.items.map((item, index) => (
                   <motion.li
-                    key={item.href}
+                    key={item.id}
                     initial={reduced ? false : { opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
@@ -203,7 +177,7 @@ function NavGroupMenu({ group }: { group: NavGroup }) {
                     <NavAnchor
                       item={item}
                       pathname={pathname}
-                      onNavigate={closeGroup}
+                      onNavigate={closeMenu}
                     />
                   </motion.li>
                 ))}
@@ -220,10 +194,7 @@ function MobileNav() {
   const pathname = usePathname()
   const dialogRef = useRef<HTMLDialogElement>(null)
   const mobileOpen = useNavStore((state) => state.mobileOpen)
-  const mobileExpandedId = useNavStore((state) => state.mobileExpandedId)
   const setMobileOpen = useNavStore((state) => state.setMobileOpen)
-  const toggleMobileGroup = useNavStore((state) => state.toggleMobileGroup)
-  const reduced = useReducedMotion()
 
   useEffect(() => {
     const dialog = dialogRef.current
@@ -272,61 +243,21 @@ function MobileNav() {
         </button>
       </motion.div>
       <motion.div className="nav-dialog-body">
-        {navGroups.map((group) => {
-          const expanded = mobileExpandedId === group.id
-          const panelId = `mobile-panel-${group.id}`
-
-          return (
-            <motion.div key={group.id} className="nav-mobile-group">
-              <button
-                type="button"
-                className="nav-mobile-trigger"
-                aria-expanded={expanded}
-                aria-controls={panelId}
-                onClick={() => toggleMobileGroup(group.id)}
-              >
-                <span className="nav-mobile-title">{group.name}</span>
-                <ChevronDown
-                  aria-hidden
-                  data-open={expanded ? "true" : "false"}
-                />
-              </button>
-              <AnimatePresence>
-                {expanded ? (
-                  <motion.div
-                    id={panelId}
-                    initial={reduced ? false : { opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={reduced ? undefined : { opacity: 0, y: 8 }}
-                    transition={enter}
-                  >
-                    <p className="nav-kicker">{group.description}</p>
-                    <ul className="nav-mobile-list">
-                      {group.children.map((item) => (
-                        <li key={item.href}>
-                          <NavAnchor
-                            item={item}
-                            pathname={pathname}
-                            onNavigate={() => setMobileOpen(false)}
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ) : null}
-              </AnimatePresence>
-            </motion.div>
-          )
-        })}
+        <p className="nav-kicker">{navMenu.name}</p>
+        <ul className="nav-mobile-list">
+          {navMenu.items.map((item) => (
+            <li key={item.id}>
+              <NavAnchor
+                item={item}
+                pathname={pathname}
+                onNavigate={() => setMobileOpen(false)}
+              />
+            </li>
+          ))}
+        </ul>
       </motion.div>
       <motion.div className="nav-dialog-foot">
-        <a
-          href={ctaLink.href}
-          className="button primary-fill"
-          onClick={() => setMobileOpen(false)}
-        >
-          {ctaLink.name}
-        </a>
+        <SubscribeLink onNavigate={() => setMobileOpen(false)} />
       </motion.div>
     </dialog>
   )
@@ -338,7 +269,7 @@ export function SiteHeader() {
   const mobileOpen = useNavStore((state) => state.mobileOpen)
   const setScrolled = useNavStore((state) => state.setScrolled)
   const setMobileOpen = useNavStore((state) => state.setMobileOpen)
-  const closeGroup = useNavStore((state) => state.closeGroup)
+  const closeMenu = useNavStore((state) => state.closeMenu)
   const closeAll = useNavStore((state) => state.closeAll)
 
   useEffect(() => {
@@ -359,7 +290,7 @@ export function SiteHeader() {
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        closeGroup()
+        closeMenu()
       }
     }
 
@@ -370,7 +301,7 @@ export function SiteHeader() {
         return
       }
 
-      closeGroup()
+      closeMenu()
     }
 
     window.addEventListener("keydown", onKey)
@@ -380,7 +311,7 @@ export function SiteHeader() {
       window.removeEventListener("keydown", onKey)
       document.removeEventListener("pointerdown", onPointerDown)
     }
-  }, [closeGroup])
+  }, [closeMenu])
 
   useEffect(() => {
     const media = window.matchMedia("(min-width: 1024px)")
@@ -409,14 +340,10 @@ export function SiteHeader() {
             awfixer
           </Link>
           <nav className="site-nav-desktop" aria-label="Primary">
-            {navGroups.map((group) => (
-              <NavGroupMenu key={group.id} group={group} />
-            ))}
+            <NavMenu />
           </nav>
           <motion.div className="site-header-actions">
-            <a href={ctaLink.href} className="button primary-fill">
-              {ctaLink.name}
-            </a>
+            <SubscribeLink />
             <button
               type="button"
               className="mnav-toggle"

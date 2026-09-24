@@ -3,15 +3,13 @@ import { create } from "zustand"
 const CLOSE_MS = 140
 
 type NavState = {
-  openGroupId: string | null
+  menuOpen: boolean
   mobileOpen: boolean
-  mobileExpandedId: string | null
   scrolled: boolean
-  openGroup: (id: string) => void
-  scheduleCloseGroup: () => void
-  closeGroup: () => void
+  openMenu: () => void
+  scheduleCloseMenu: () => void
+  closeMenu: () => void
   setMobileOpen: (open: boolean) => void
-  toggleMobileGroup: (id: string) => void
   closeAll: () => void
   setScrolled: (scrolled: boolean) => void
 }
@@ -26,41 +24,35 @@ function clearCloseTimer() {
 }
 
 export const useNavStore = create<NavState>((set) => ({
-  openGroupId: null,
+  menuOpen: false,
   mobileOpen: false,
-  mobileExpandedId: null,
   scrolled: false,
-  openGroup: (id) => {
+  openMenu: () => {
     clearCloseTimer()
-    set({ openGroupId: id })
+    set({ menuOpen: true })
   },
-  scheduleCloseGroup: () => {
+  scheduleCloseMenu: () => {
     clearCloseTimer()
     closeTimer = setTimeout(() => {
-      set({ openGroupId: null })
+      set({ menuOpen: false })
     }, CLOSE_MS)
   },
-  closeGroup: () => {
+  closeMenu: () => {
     clearCloseTimer()
-    set({ openGroupId: null })
+    set({ menuOpen: false })
   },
   setMobileOpen: (open) => {
     if (!open) {
-      set({ mobileOpen: false, mobileExpandedId: null })
+      set({ mobileOpen: false })
       return
     }
 
     clearCloseTimer()
-    set({ mobileOpen: true, openGroupId: null })
-  },
-  toggleMobileGroup: (id) => {
-    set((state) => ({
-      mobileExpandedId: state.mobileExpandedId === id ? null : id,
-    }))
+    set({ mobileOpen: true, menuOpen: false })
   },
   closeAll: () => {
     clearCloseTimer()
-    set({ openGroupId: null, mobileOpen: false, mobileExpandedId: null })
+    set({ menuOpen: false, mobileOpen: false })
   },
   setScrolled: (scrolled) => {
     set((state) => (state.scrolled === scrolled ? state : { scrolled }))

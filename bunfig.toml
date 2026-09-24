@@ -1,0 +1,16 @@
+[install]
+minimumReleaseAge = 0
+#optional = false
+#peer = false
+#exact = true
+ignoreScripts = true
+auto = "disable"
+linkWorkspacePackages = true
+
+[run]
+shell = "bun"
+noOrphans = true
+
+[test]
+coverageThreshold = 0.9
+
