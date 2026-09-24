@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/experimental.ts"],"sourcesContent":["'use client';\n\nexport * from '@clerk/react/experimental';\n"],"mappings":";AAEA,cAAc;","names":[]}
